@@ -3,12 +3,17 @@
     <div>
         <h6>Sending, Receiving, and other Fundamentals</h6>
         <ul>
-            <li><a>Sending and Standard out</a></li>
-            <li><a>Receiving</a></li>
-            <li><a>Telephone, Names, and Processes</a></li>
-            <li><a>Persistant Send and Peek</a></li>
-            <li><a>Join Operator</a></li>
-            <li><a>Quiz</a></li>
+            <li><a id="sending" class="scroll" href="javascript:void(0)">Sending and Standard out</a></li>
+            <li><a id="receiving" class="scroll" href="javascript:void(0)">Receiving</a></li>
+            <li><a id="telephone" class="scroll" href="javascript:void(0)">Telephone, Names, and Processes</a></li>
+            <li><a id="sendAndPeek" class="scroll" href="javascript:void(0)">Persistant Send and Peek</a></li>
+            <li><a id="joinOperator" class="scroll" href="javascript:void(0)">Join Operator</a></li>
+        </ul>
+        <h6>Name Privacy</h6>
+        <ul>
+            <li><a id="unforgeable" class="scroll" href="javascript:void(0)">Unforgeable Names and Acks</a></li>
+            <li><a id="bundles" class="scroll" href="javascript:void(0)">Bundles</a></li>
+            <li><a id="stateChannels" class="scroll" href="javascript:void(0)">State Channels</a></li>
         </ul>
     </div>
 </div>
@@ -23,7 +28,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus quis dui ac molestie. Nunc augue nulla, ultrices eu bibendum vitae, faucibus dignissim odio. Aliquam vel leo id sem pulvinar ultricies vel eu justo. Proin maximus est magna, sit amet porttitor lacus sodales quis. Nunc dapibus purus lobortis orci dapibus rhoncus. </p>
         </div>
 
-        <div class="card" id="sending">
+        <div class="card" id="sendingSection">
             <h1 id="sending-and-standard-out">Sending and Standard Out</h1>
             <h2 id="say-hello">Say Hello</h2>
             <p class="imgWrapper"><img src="/assets/helloWorld.png" alt="&quot;Person waiving hello&quot;"></p>
@@ -102,7 +107,7 @@
         </div>
 
 
-        <div class="card" id="receiving">
+        <div class="card" id="receivingSection">
             <h1 id="receiving">Receiving</h1>
             <h2 id="check-for-messages">Check for Messages</h2>
             <p class="imgWrapper"><img src="/assets/Keys.png" alt="// Dear future self, keys in freezer because..."></p>
@@ -169,7 +174,7 @@
             <p>The channel is just named <code>@&quot;coffeeShop&quot;</code>. Change it to be named after a specific coffee shop of your choosing. While you&#39;re at it, modify the code to use <code>new</code> like we recently learned.</p>
             <h2 id="persistent-for">Persistent For</h2>
             <p>There are actually two different styles of syntax in rholang to achieve this persistent behavior. We just learned about <code>contract</code>. The following snippets are equivalent.</p>
-            <pre class="inline-code">contract @"coffeeShop"(order) = {</pre>
+            <pre class="inline-code">contract @"coffeeShop"(order) = {</pre><br>
             <pre class="inline-code">for(order &lt;= @"coffeeShop") {</pre>
             <p>Notice this is different from a normal <code>for</code> because it has a double arrow <code>&lt;=</code> rather than a single arrow <code>&lt;-</code>. The only difference between the persistent for and a contract comes when we start talking about blockchains. For now you can think of them as the same thing.</p>
             <h3 id="exercise">Exercise</h3>
@@ -194,7 +199,7 @@
 
         </div>
 
-        <div class="card" id="telephone">
+        <div class="card" id="telephoneSection">
             <h1 id="telephone-names-and-processes">Telephone, Names, and Processes</h1>
             <h2 id="message-relaying">Message Relaying</h2>
             <p class="imgWrapper"><img src="/assets/telephone.png" alt="The game of telephone is perfect to simulate message forwarding in rholang."></p>
@@ -308,7 +313,7 @@
         </div>
 
 
-        <div class="card" id="sendAndPeek">
+        <div class="card" id="sendAndPeekSection">
             <h1 id="persistent-sends-and-peek">Persistent Sends and Peek</h1>
             <h2 id="why-send-repeatedly-">Why send repeatedly?</h2>
             <p class="imgWrapper"><img src="/assets/broadcasting.png" alt="This radio navigation aid helps airplanes navigate by broadcasting the same message over and over"></p>
@@ -420,7 +425,7 @@ for (msg &lt;- &commat;"grandma"){
 
         </div>
 
-        <div class="card" id="joinOperator">
+        <div class="card" id="joinOperatorSection">
             <h1 id="join-operator">Join Operator</h1>
             <h2 id="multiple-data-sources">Multiple data sources</h2>
             <p class="imgWrapper"><img src="/assets/pushups.png" alt="In general, the winner of this pushup competition can&#39;t be determined until both participants are finished."></p>
@@ -471,7 +476,7 @@ for (msg &lt;- &commat;"grandma"){
                 <li><input disabled="" type="checkbox"> <code>@&quot;AliceLaunch&quot;!(&quot;cancel&quot;)</code></li>
                 <li><input checked="" disabled="" type="checkbox"> <code>for (x &lt;- @&quot;AliceLaunch&quot;){0}</code></li>
             </ul>
-            <p>The concept of joins is framed as the dining philosophers problem, and [<a href="https://developer.rchain.coop/tutorial/#dining-philosophers-and-deadlock&quot;]">https://developer.rchain.coop/tutorial/#dining-philosophers-and-deadlock&quot;]</a>(explored further) in the concise rholang tutorial.</p>
+            <p>The concept of joins is framed as the dining philosophers problem, and <a href="https://developer.rchain.coop/tutorial/#dining-philosophers-and-deadlock&quot;]">(explored further)</a> in the concise rholang tutorial.</p>
             <p>In <code>for (x &lt;- y; a &lt;- b){ 0 }</code>, which channel must be sent on first?</p>
             <ul class="quiz">
                 <li><input disabled="" type="checkbox"> y</li>
@@ -534,7 +539,7 @@ for (msg &lt;- &commat;"grandma"){
 
         </div>
 
-        <div class="card" id="unforgeable">
+        <div class="card" id="unforgeableSection">
             <h1 id="unforgeable-names-and-acks">Unforgeable Names and Acks</h1>
             <h2 id="making-channels-private">Making Channels &quot;Private&quot;</h2>
             <p class="imgWrapper"><img src="/assets/stealing.png" alt="A competing pizza shop steals orders because the channel isn&#39;t secure."></p>
@@ -738,7 +743,7 @@ for (msg &amp;lt;- myChan) {stdout!(*msg)}</code></p>
 
         </div>
 
-        <div class="card" id="bundles">
+        <div class="card" id="bundlesSection">
             <h1 id="bundles">Bundles</h1>
             <h2 id="stolen-messages">Stolen Messages</h2>
             <p class="imgWrapper"><img src="/assets/Alice.png" alt="Alice&#39;s fans love her and want to send her lots of mail ."></p>
@@ -969,7 +974,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
 
         </div>
 
-        <div class="card" id="stateChannels">
+        <div class="card" id="stateChannelsSection">
             <h1 id="state-channels">State Channels</h1>
             <h2 id="holding-on-to-data">Holding on to data</h2>
             <p class="imgWrapper"><img src="/assets/variables.png" alt="Variables are so 2015. It&#39;s all about state channels now."></p>
