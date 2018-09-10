@@ -501,6 +501,7 @@ li {
     border: 1px solid #ff4143;
     border-radius: .15rem;
     color: #ff4143;
+    cursor: pointer;
     font-family: Montserrat-Medium;
     font-size: 1.1rem;
     padding: .5rem 0;
@@ -639,6 +640,7 @@ li {
         padding: .4rem .7rem 1rem;
     }
     .nav {
+        background: white;
         height: 70px;
         overflow: hidden;
         padding: 1.2rem 0;

@@ -410,19 +410,28 @@ body {
 
 @media (max-width: 767px) {
     body {
-        padding: 0 0 318.5px;
+        padding: 70px 0 318.5px;
+    }
+    .nav {
+        border-bottom: 1px solid black;
     }
     .nav .item > a:not(.btn-blue) {
         color: black;
     }
-    .nav.active .item img.red {
+    .nav.active .item img.red, .nav .item img.red {
         visibility: visible;
+    }
+    .nav.active .item img.white, .nav .item img.white {
+        visibility: hidden;
+    }
+    .nav .item#hamburger span p {
+        background: black;
     }
     .section#headerSection {
         background: url(/assets/mobile-background1.png);
     background-repeat: no-repeat;
     background-size: 100%;
-        padding: 6rem .7rem 0;
+        padding: 2rem .7rem 0;
     }
 
     .section#headerSection .textWrapper {
@@ -530,6 +539,13 @@ body {
     .section#headerSection .textWrapper {
         width: auto;
     }
+    .section#rhoSection .flexWrapper .imgWrapper {
+        padding: 0 6rem;
+    }
+    .section#rhoSection .flexWrapper .textWrapper {
+        margin: auto;
+        text-align: center;
+    }
     .section#headerSection .textWrapper > h1,
     .section#rhoSection > h1 {
         font-size: 6vw;
@@ -562,7 +578,7 @@ body {
 
 @media (max-width: 550px) {
     body {
-        padding: 0 0 379.5px;
+        padding: 70px 0 379.5px;
     }
     .section#rhoSection > h1 {
         font-size: 7.5vw;
