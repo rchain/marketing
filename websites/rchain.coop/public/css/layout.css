@@ -225,6 +225,17 @@ li {
     text-transform: uppercase;
 }
 
+.nav .item.links {
+    border-bottom: 3px solid transparent;
+    margin: 1.15rem 2.5rem 0;
+    transition: .2s;
+}
+
+.nav .item.links:hover:nth-child(2), .nav .item.links:hover:nth-child(3) {
+    border-bottom: 3px solid #a50034;
+    margin: 1.15rem 2.5rem 0;
+}
+
 .nav .item#hamburger {
     display: none;
 }
