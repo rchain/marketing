@@ -76,6 +76,10 @@ router.get('/leadership', function (req, res) {
     });
 });
 
+router.get('/events', function (req, res) {
+    res.redirect('https://developer.rchain.coop/conference');
+});
+
 /* POST Newsletter signup. */
 router.post('/newsletter-submission', function (req, res) {
     var success = ["success"];
