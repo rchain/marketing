@@ -294,13 +294,13 @@ p, li {
 
 .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper:nth-child(1) div p {
     font-family: Montserrat-Bold;
-    font-size: 1.2rem;
+    font-size: .8rem;
     margin: 0;
 }
 
 
 .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) img {
-    margin-bottom: 1rem;
+    margin-bottom: .3rem;
 }
 
 .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper a {
@@ -530,11 +530,20 @@ p, li {
     .section#articleSection > .flexWrapper:nth-child(1) {
         flex-wrap: wrap;
     }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper:nth-child(1) div {
+        text-align: center;
+        width: auto;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) img {
+        width: 70%;
+    }
     .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2,
     .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2 {
         text-align: center;
     }
     .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) {
+        display: block;
+        margin-bottom: 1rem;
         width: auto;
     }
     .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(2) {
@@ -544,10 +553,11 @@ p, li {
     .section#articleSection > .flexWrapper:nth-child(1) > div:nth-child(2) img {
         display: block;
         margin: auto;
-        width: 25rem;
+        width: 100%;
     }
     .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper a {
         display: block;
+        margin-top: 2rem;
     }
 }
 

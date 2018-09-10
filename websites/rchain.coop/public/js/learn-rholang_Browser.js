@@ -19,3 +19,35 @@ $(".scroll").click(function () {
     });
     return false;
 });
+
+/*
+function quiz1() {
+    if (this.val == "correct") {
+        console.log("hi");
+        document.getElementById("quiz1Correct").style.display = "block";
+         document.getElementById("quiz1incorrect").style.display = "none";
+    } else {
+        console.log("by");
+        document.getElementById("quiz1incorrect").style.display = "block";
+        document.getElementById("quiz1Correct").style.display = "none";
+    }
+}
+*/
+
+$(function() {
+    $('input[class="quiz"]').on('click', function() {
+        var quiz = this.name;
+        if ($(this).val() == 'correct') {
+            $('#' + quiz + 'Correct').show();
+            $('#' + quiz + 'incorrect').hide();
+        }
+        else {
+            $('#' + quiz + 'Correct').hide();
+            $('#' + quiz + 'incorrect').show();
+        }
+    });
+});
+
+
+
+

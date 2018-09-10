@@ -412,6 +412,12 @@ body {
     body {
         padding: 0 0 318.5px;
     }
+    .nav .item > a:not(.btn-blue) {
+        color: black;
+    }
+    .nav.active .item img.red {
+        visibility: visible;
+    }
     .section#headerSection {
         background: url(/assets/mobile-background1.png);
     background-repeat: no-repeat;

@@ -77,9 +77,15 @@
     font-family: Montserrat-Thin;
     src: url(/fonts/montserrat/Montserrat-Thin.otf);
 }
+
 @font-face {
     font-family: Montserrat-ExtraLightItalic;
     src: url(/fonts/montserrat/Montserrat-ExtraLightItalic.otf);
+}
+
+@font-face {
+    font-family: Montserrat-LightItalic;
+    src: url(/fonts/montserrat/Montserrat-LightItalic.otf);
 }
 
 

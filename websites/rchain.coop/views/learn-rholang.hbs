@@ -42,7 +42,7 @@
             <h3 id="exercise">Exercise</h3>
             <p>Try to change &quot;stdout&quot; to something else. Any results?.</p>
             <ul>
-                <li>Try this funny channel name <code>@&quot;someChannel&quot;</code>.</li>
+                <li>Try this funny channel name <pre><code>@&quot;someChannel&quot;</code></pre>.</li>
                 <li>We&#39;re casual here. Make the program say &quot;Sup World&quot; on the screen.</li>
             </ul>
             <h2 id="wth-is-stdout-">WTH is stdout?</h2>
@@ -81,25 +81,37 @@
             <h2 id="quiz">Quiz</h2>
             <p>What will <code>stdout!(&quot;Programming!&quot;)</code> print to the screen?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> Programming!</li>
-                <li><input disabled="" type="checkbox"> stdout!</li>
-                <li><input disabled="" type="checkbox"> Nothing</li>
+                <li><input type="radio" name="quiz1" value="correct" id="Programming!" class="quiz"> Programming!</li>
+                <li><input type="radio" name="quiz1" value="incorrect" id="stdout!" class="quiz"> stdout!</li>
+                <li><input type="radio" name="quiz1" value="incorrect" id="Nothing" class="quiz"> Nothing</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz1Correct">Correct!</p>
+                <p class="incorrect" id="quiz1incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What channel does <code>@&quot;what&quot;!(&quot;Up&quot;)</code> send a message on?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>@&quot;Up&quot;</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>@&quot;what&quot;</code></li>
-                <li><input disabled="" type="checkbox"> <code>what</code></li>
+                <li><input value="incorrect" type="radio" name="quiz2" class="quiz"> <code>@&quot;Up&quot;</code></li>
+                <li><input value="correct" type="radio" name="quiz2" class="quiz"> <code>@&quot;what&quot;</code></li>
+                <li><input value="incorrect" type="radio" name="quiz2" class="quiz"> <code>what</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz2Correct">Correct!</p>
+                <p class="incorrect" id="quiz2incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>Which does rholang do first in</p>
             <pre class="inline-code">@"stdout"!("Dogs")
 |
 @"stdout"!("Cats")</pre>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> prints &quot;Dogs&quot;</li>
-                <li><input disabled="" type="checkbox"> prints &quot;Cats&quot;</li>
-                <li><input checked="" disabled="" type="checkbox"> Neither. They are concurrent</li>
+                <li><input value="incorrect" type="radio" name="quiz3" class="quiz"> prints &quot;Dogs&quot;</li>
+                <li><input value="incorrect" type="radio" name="quiz3" class="quiz"> prints &quot;Cats&quot;</li>
+                <li><input value="correct" type="radio" name="quiz3" class="quiz"> Neither. They are concurrent</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz3Correct">Correct!</p>
+                <p class="incorrect" id="quiz3incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>PS. There is also a special channel called <code>stderr</code>. Check out what happens when you send to it.</p>
             <p><a href="https://en.wikipedia.org/wiki/Standard_streams">what&#39;s the difference?</a></p>
 
@@ -164,12 +176,16 @@
             <p>Change the acknowledgement message</p>
             <p>Which should generally come first?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> A send because that&#39;s how normal mail works.</li>
-                <li><input disabled="" type="checkbox"> A receive because it&#39;s faster to run the code that way.</li>
-                <li><input checked="" disabled="" type="checkbox"> Either a send or a receive can come first, or they can come together.</li>
-                <li><input disabled="" type="checkbox"> A receive because rholang is concurrent.</li>
-                <li><input disabled="" type="checkbox"> Neither. Just make a comm event directly.</li>
+                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> A send because that&#39;s how normal mail works.</li>
+                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> A receive because it&#39;s faster to run the code that way.</li>
+                <li><input  value="correct" type="radio" name="quiz4" class="quiz"> Either a send or a receive can come first, or they can come together.</li>
+                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> A receive because rholang is concurrent.</li>
+                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> Neither. Just make a comm event directly.</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz4Correct">Correct!</p>
+                <p class="incorrect" id="quiz4incorrect">Incorrect. Please try again.</p>
+            </div>
             <h3 id="exercise">Exercise</h3>
             <p>The channel is just named <code>@&quot;coffeeShop&quot;</code>. Change it to be named after a specific coffee shop of your choosing. While you&#39;re at it, modify the code to use <code>new</code> like we recently learned.</p>
             <h2 id="persistent-for">Persistent For</h2>
@@ -185,17 +201,24 @@
 
             <p>Which of these things is not like the other?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>for (a &lt;- b){}</code></li>
-                <li><input disabled="" type="checkbox"> <code>contract b(a) = {}</code></li>
-                <li><input disabled="" type="checkbox"> <code>for (a &lt;= b){}</code></li>
+                <li><input  value="correct" type="radio" name="quiz5" class="quiz"> <code>for (a &lt;- b){}</code></li>
+                <li><input value="incorrect" type="radio" name="quiz5" class="quiz"> <code>contract b(a) = {}</code></li>
+                <li><input value="incorrect" type="radio" name="quiz5" class="quiz"> <code>for (a &lt;= b){}</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz5Correct">Correct!</p>
+                <p class="incorrect" id="quiz5incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>Which send will produce a comm event with <code>for (message &lt;- @&quot;grandmasSnapChat&quot;){0}</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>grandmasSnapChat!(&quot;Hi Grandma&quot;)</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>@&quot;grandmasSnapChat&quot;!(&quot;Glad you&#39;re snapping Grandma&quot;)</code></li>
-                <li><input disabled="" type="checkbox"> <code>for(&quot;Here&#39;s a snap for you g&#39;ma&quot; &lt;- @&quot;grandmasSnapChat&quot;)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz6" class="quiz"> <code>grandmasSnapChat!(&quot;Hi Grandma&quot;)</code></li>
+                <li><input value="correct"  type="radio" name="quiz6" class="quiz"> <code>@&quot;grandmasSnapChat&quot;!(&quot;Glad you&#39;re snapping Grandma&quot;)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz6" class="quiz"> <code>for(&quot;Here&#39;s a snap for you g&#39;ma&quot; &lt;- @&quot;grandmasSnapChat&quot;)</code></li>
             </ul>
-
+            <div class="quizResponse">
+                <p class="correct" id="quiz6Correct">Correct!</p>
+                <p class="incorrect" id="quiz6incorrect">Incorrect. Please try again.</p>
+            </div>
 
         </div>
 
@@ -206,7 +229,7 @@
             <p>We&#39;ve previously learned how to send a message to grandma or a pizza shop. But so far all those recipients have done is acknowledge the message by printing to standard output.</p>
             <p>Now let&#39;s make them do something more interesting by passing the message along like in a child&#39;s telephone game</p>
 
-            <pre class="rholang-file">new stdout(`rho:io:stdout`) in {
+            <pre class="rholang-file"><code>new stdout(`rho:io:stdout`) in {
   // Start the game by sending a message to Alice
   @"Alice"!("How to program: Change stuff and see what happens.")
   |
@@ -225,7 +248,7 @@
     stdout!(*message)
   }
 }
-</pre>
+</code></pre>
 
             <p>As the message says, you learn most when you experiment. So be sure to change things as you see fit.</p>
             <h3 id="exercise">Exercise</h3>
@@ -259,52 +282,84 @@
             <h2 id="quiz">Quiz</h2>
             <p>What do we send?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> processes</li>
-                <li><input disabled="" type="checkbox"> names</li>
+                <li><input value="correct"  type="radio" name="quiz7" class="quiz"> processes</li>
+                <li><input value="incorrect"  type="radio" name="quiz7" class="quiz"> names</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz7Correct">Correct!</p>
+                <p class="incorrect" id="quiz7incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What do we receive?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> processes</li>
-                <li><input checked="" disabled="" type="checkbox"> names</li>
+                <li><input value="incorrect" type="radio" name="quiz8" class="quiz"> processes</li>
+                <li><input value="correct"  type="radio" name="quiz8" class="quiz"> names</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz8Correct">Correct!</p>
+                <p class="incorrect" id="quiz8incorrect">Incorrect. Please try again.</p>
+            </div>
             <p> What is <code>@&quot;registration&quot;</code></p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> process</li>
-                <li><input checked="" disabled="" type="checkbox"> name</li>
-                <li><input disabled="" type="checkbox"> invalid syntax</li>
+                <li><input value="incorrect" type="radio" name="quiz9" class="quiz"> process</li>
+                <li><input value="correct"  type="radio" name="quiz9" class="quiz"> name</li>
+                <li><input value="incorrect" type="radio" name="quiz9" class="quiz"> invalid syntax</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz9Correct">Correct!</p>
+                <p class="incorrect" id="quiz9incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What is <code>0</code>?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> process</li>
-                <li><input disabled="" type="checkbox"> name</li>
-                <li><input disabled="" type="checkbox"> invalid syntax</li>
+                <li><input value="correct"  type="radio" name="quiz10" class="quiz"> process</li>
+                <li><input value="incorrect" type="radio" name="quiz10" class="quiz"> name</li>
+                <li><input value="incorrect" type="radio" name="quiz10" class="quiz"> invalid syntax</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz10Correct">Correct!</p>
+                <p class="incorrect" id="quiz10incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What is <code>@0</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> process</li>
-                <li><input checked="" disabled="" type="checkbox"> name</li>
-                <li><input disabled="" type="checkbox"> invalid syntax</li>
+                <li><input value="incorrect" type="radio" name="quiz11" class="quiz"> process</li>
+                <li><input value="correct"  type="radio" name="quiz11" class="quiz"> name</li>
+                <li><input value="incorrect" type="radio" name="quiz11" class="quiz"> invalid syntax</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz11Correct">Correct!</p>
+                <p class="incorrect" id="quiz11incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What is <code>@@0</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> process</li>
-                <li><input disabled="" type="checkbox"> name</li>
-                <li><input checked="" disabled="" type="checkbox"> invalid syntax</li>
+                <li><input value="incorrect" type="radio" name="quiz12" class="quiz"> process</li>
+                <li><input value="incorrect" type="radio" name="quiz12" class="quiz"> name</li>
+                <li><input value="correct"  type="radio" name="quiz12" class="quiz"> invalid syntax</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz12Correct">Correct!</p>
+                <p class="incorrect" id="quiz12incorrect">Incorrect. Please try again.</p>
+            </div>
             <p><code>*importantData</code> is a process, so what is <code>importantData</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> process</li>
-                <li><input checked="" disabled="" type="checkbox"> name</li>
-                <li><input disabled="" type="checkbox"> invalid syntax</li>
+                <li><input value="incorrect" type="radio" name="quiz13" class="quiz"> process</li>
+                <li><input value="correct"  type="radio" name="quiz13" class="quiz"> name</li>
+                <li><input value="incorrect" type="radio" name="quiz13" class="quiz"> invalid syntax</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz13Correct">Correct!</p>
+                <p class="incorrect" id="quiz13incorrect">Incorrect. Please try again.</p>
+            </div>
             <p> Which of these is equivalent to <code>&quot;BobsPhone&quot;</code>?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>*@&quot;BobsPhone&quot;</code></li>
-                <li><input disabled="" type="checkbox"> <code>@&quot;BobsPhone&quot;</code></li>
-                <li><input disabled="" type="checkbox"> <code>*&quot;BobsPhone&quot;</code></li>
-                <li><input disabled="" type="checkbox"> <code>@*BobsPhone</code></li>
-                <li><input disabled="" type="checkbox"> <code>stdout!(&quot;BobsPhone&quot;)</code></li>
+                <li><input value="correct"  type="radio" name="quiz14" class="quiz"> <code>*@&quot;BobsPhone&quot;</code></li>
+                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>@&quot;BobsPhone&quot;</code></li>
+                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>*&quot;BobsPhone&quot;</code></li>
+                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>@*BobsPhone</code></li>
+                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>stdout!(&quot;BobsPhone&quot;)</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz14Correct">Correct!</p>
+                <p class="incorrect" id="quiz14incorrect">Incorrect. Please try again.</p>
+            </div>
             <h3 id="exercise">Exercise</h3>
             <p class="imgWrapper"><img src="/assets/telephoneFork.png" alt="This telephone game has a fork"></p>
             <p>Instead of a linear telephone game where each player passes the message to the next, let&#39;s add a branch in the game. So now Bob will send to Charlie like before, but Bob will also send to Elise.</p>
@@ -337,10 +392,14 @@ for (info &lt;- @"airportInfo") {
             <p>By the way, did you notice that we don&#39;t need <code>new stdout(...) in {}</code> when we don&#39;t actually use <code>stdout</code>.</p>
             <p>How many comms happen in <code>for (x &lt;- y) {0} | y!!(0)</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>1</code></li>
-                <li><input disabled="" type="checkbox"> <code>many</code></li>
-                <li><input disabled="" type="checkbox"> <code>0</code></li>
+                <li><input value="correct"  type="radio" name="quiz15" class="quiz"> <code>1</code></li>
+                <li><input value="incorrect" type="radio" name="quiz15" class="quiz"> <code>many</code></li>
+                <li><input value="incorrect" type="radio" name="quiz15" class="quiz"> <code>0</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz15Correct">Correct!</p>
+                <p class="incorrect" id="quiz15incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="double-checking-a-message">Double Checking a Message</h2>
             <p>Persistent sends and receives are very useful as we just showed. But often normal sends and receives are perfectly good too. Imagine that I send my grandmother a letter, and she receives it.</p>
 
@@ -361,10 +420,14 @@ for (info &lt;- @"airportInfo") {
             <p>Give that a try on your own first. The solution is listed below.</p>
             <p>How many comms happen in <code>for (x &lt;= y) {0} | y!!(0)</code></p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>1</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>many</code></li>
-                <li><input disabled="" type="checkbox"> <code>0</code></li>
+                <li><input value="incorrect" type="radio" name="quiz16" class="quiz"> <code>1</code></li>
+                <li><input value="correct"  type="radio" name="quiz16" class="quiz"> <code>many</code></li>
+                <li><input value="incorrect" type="radio" name="quiz16" class="quiz"> <code>0</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz16Correct">Correct!</p>
+                <p class="incorrect" id="quiz16incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="answer-to-exercise">Answer to Exercise</h2>
             <p>
 
@@ -411,17 +474,24 @@ for (msg &lt;- &commat;"grandma"){
             <p>If you&#39;ve ever written spreadsheet macros, or even used a spreadsheet. Accessing data without consuming it should be familiar. Think of it as</p>
             <p>Which syntax is used to peek at a message?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>for (x &lt;! y){...}</code></li>
-                <li><input disabled="" type="checkbox"> <code>for (x &lt;= y){...}</code></li>
-                <li><input disabled="" type="checkbox"> <code>x!!(y)</code></li>
+                <li><input value="correct"   type="radio" name="quiz17" class="quiz"> <code>for (x &lt;! y){...}</code></li>
+                <li><input value="incorrect"  type="radio" name="quiz17" class="quiz"> <code>for (x &lt;= y){...}</code></li>
+                <li><input value="incorrect"  type="radio" name="quiz17" class="quiz"> <code>x!!(y)</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz17Correct">Correct!</p>
+                <p class="incorrect" id="quiz17incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>How many comms happen in <code>for (x &lt;! y) {0} | y!!(0)</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>1</code></li>
-                <li><input disabled="" type="checkbox"> <code>many</code></li>
-                <li><input disabled="" type="checkbox"> <code>0</code></li>
+                <li><input value="correct"   type="radio" name="quiz18" class="quiz"> <code>1</code></li>
+                <li><input value="incorrect" type="radio" name="quiz18" class="quiz"> <code>many</code></li>
+                <li><input value="incorrect" type="radio" name="quiz18" class="quiz"> <code>0</code></li>
             </ul>
-
+            <div class="quizResponse">
+                <p class="correct" id="quiz18Correct">Correct!</p>
+                <p class="incorrect" id="quiz18incorrect">Incorrect. Please try again.</p>
+            </div>
 
         </div>
 
@@ -472,25 +542,37 @@ for (msg &lt;- &commat;"grandma"){
 </pre>
             <p>What code would Alice need to &quot;par in&quot; to retract her launch command.</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>@&quot;AliceCancel&quot;!(&quot;cancelZ&quot;)</code></li>
-                <li><input disabled="" type="checkbox"> <code>@&quot;AliceLaunch&quot;!(&quot;cancel&quot;)</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>for (x &lt;- @&quot;AliceLaunch&quot;){0}</code></li>
+                <li><input value="incorrect" type="radio" name="quiz19" class="quiz"> <code>@&quot;AliceCancel&quot;!(&quot;cancelZ&quot;)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz19" class="quiz"> <code>@&quot;AliceLaunch&quot;!(&quot;cancel&quot;)</code></li>
+                <li><input value="correct"  type="radio" name="quiz19" class="quiz"> <code>for (x &lt;- @&quot;AliceLaunch&quot;){0}</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz19Correct">Correct!</p>
+                <p class="incorrect" id="quiz19incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>The concept of joins is framed as the dining philosophers problem, and <a href="https://developer.rchain.coop/tutorial/#dining-philosophers-and-deadlock&quot;]">(explored further)</a> in the concise rholang tutorial.</p>
             <p>In <code>for (x &lt;- y; a &lt;- b){ 0 }</code>, which channel must be sent on first?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> y</li>
-                <li><input disabled="" type="checkbox"> b</li>
-                <li><input checked="" disabled="" type="checkbox"> doesn&#39;t matter</li>
-                <li><input disabled="" type="checkbox"> they must be sent simultaneously</li>
+                <li><input value="incorrect" type="radio" name="quiz20" class="quiz"> y</li>
+                <li><input value="incorrect" type="radio" name="quiz20" class="quiz"> b</li>
+                <li><input value="correct"  type="radio" name="quiz20" class="quiz"> doesn&#39;t matter</li>
+                <li><input value="incorrect" type="radio" name="quiz20" class="quiz"> they must be sent simultaneously</li>
             </ul>
+             <div class="quizResponse">
+                <p class="correct" id="quiz20Correct">Correct!</p>
+                <p class="incorrect" id="quiz20incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>In <code>for (x &lt;- y; a &lt;- b){ 0 }</code>, which message will be consumed first?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> x</li>
-                <li><input disabled="" type="checkbox"> a</li>
-                <li><input disabled="" type="checkbox"> doesn&#39;t matter</li>
-                <li><input checked="" disabled="" type="checkbox"> they will be consumed simultaneously</li>
+                <li><input value="incorrect" type="radio" name="quiz21" class="quiz"> x</li>
+                <li><input value="incorrect" type="radio" name="quiz21" class="quiz"> a</li>
+                <li><input value="incorrect" type="radio" name="quiz21" class="quiz"> doesn&#39;t matter</li>
+                <li><input value="correct"  type="radio" name="quiz21"> they will be consumed simultaneously</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz21Correct">Correct!</p>
+                <p class="incorrect" id="quiz21incorrect">Incorrect. Please try again.</p>
+            </div>
             <h3 id="exercise">Exercise</h3>
             <p>There is a game where two players will each send a message on separate channels. Whoever sends the first message, loses, and whoever sends the second message wins. Your task here is to write the game code that will tell which player won. To play the game, players should send messages like shown.</p>
             <p><code>P1!(&quot;Send any message&quot;)</code>
@@ -532,11 +614,14 @@ for (msg &lt;- &commat;"grandma"){
 </pre>
             <p>Why is it possible for nobody to win the patience game as we wrote it above?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> Because both players could send messages at the same time</li>
-                <li><input disabled="" type="checkbox"> The players are sending on the wrong channels</li>
-                <li><input checked="" disabled="" type="checkbox"> The first block receives P2 while the second receives P1, so neither ever finishes</li>
+                <li><input value="incorrect" type="radio" name="quiz22" class="quiz"> Because both players could send messages at the same time</li>
+                <li><input value="incorrect" type="radio" name="quiz22" class="quiz"> The players are sending on the wrong channels</li>
+                <li><input value="correct"  type="radio" name="quiz22" class="quiz"> The first block receives P2 while the second receives P1, so neither ever finishes</li>
             </ul>
-
+            <div class="quizResponse">
+                <p class="correct" id="quiz22Correct">Correct!</p>
+                <p class="incorrect" id="quiz22incorrect">Incorrect. Please try again.</p>
+            </div>
         </div>
 
         <div class="card" id="unforgeableSection">
@@ -546,11 +631,15 @@ for (msg &lt;- &commat;"grandma"){
             <p>So far every channel we&#39;ve sent on has been a public name like <code>@&quot;pizzaShop&quot;</code>. Anyone can send a message to this channel (which is good for business) but anyone can receive a message on it too (which is terrible for business). Imagine if competitors could consume pizza orders so that the pizza shop never received them.</p>
             <p>What code would a bad pizza shop have to write to intercept orders?`</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>contract evilPizzaShop(interceptedMessage) = {0}</code></li>
-                <li><input disabled="" type="checkbox"> <code>@&quot;evilPizzaShop&quot;!(&quot;pizzaShop&quot;)</code></li>
-                <li><input disabled="" type="checkbox"> <code>@&quot;pizzaShop&quot;!(&quot;intercept&quot;)</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>for (interceptedMessage &amp;lt;- @&quot;pizzaShop&quot;){...}</code></li>
+                <li><input value="incorrect" type="radio" name="quiz23" class="quiz">contract evilPizzaShop(interceptedMessage) = {0}</li>
+                <li><input value="incorrect" type="radio" name="quiz23" class="quiz"> <code>@&quot;evilPizzaShop&quot;!(&quot;pizzaShop&quot;)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz23" class="quiz"> <code>@&quot;pizzaShop&quot;!(&quot;intercept&quot;)</code></li>
+                <li><input value="correct"  type="radio"name="quiz23" class="quiz"> <code>for (interceptedMessage &amp;lt;- @&quot;pizzaShop&quot;){...}</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz23Correct">Correct!</p>
+                <p class="incorrect" id="quiz23incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="bound-and-free-names">Bound and Free Names</h2>
             <p>We learned how to receive messages with <code>for</code> and <code>contract</code> last time. Both of these constructs &quot;bind&quot; names. For example, order is a bound name within the coffee shop code.</p>
             <pre class="rholang-file">for (order &lt;= @"coffeeShop") {
@@ -566,40 +655,64 @@ for (msg &lt;- &commat;"grandma"){
             <p>State whether <code>x</code> is bound or free in each of the following code snippets.</p>
             <p><code>for (x &amp;lt;- y){0}</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> Bound</li>
-                <li><input disabled="" type="checkbox"> Free</li>
-                <li><input disabled="" type="checkbox"> Neither</li>
+                <li><input value="correct"  type="radio" name="quiz24" class="quiz"> Bound</li>
+                <li><input value="incorrect" type="radio" name="quiz24" class="quiz"> Free</li>
+                <li><input value="incorrect" type="radio" name="quiz24" class="quiz"> Neither</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz24Correct">Correct!</p>
+                <p class="incorrect" id="quiz24incorrect">Incorrect. Please try again.</p>
+            </div>
             <p><code>for (y &amp;lt;- x){0}</code></p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> Bound</li>
-                <li><input checked="" disabled="" type="checkbox"> Free</li>
-                <li><input disabled="" type="checkbox"> Neither</li>
+                <li><input value="incorrect" type="radio" name="quiz25" class="quiz"> Bound</li>
+                <li><input value="correct"  type="radio" name="quiz25" class="quiz"> Free</li>
+                <li><input value="incorrect" type="radio" name="quiz25" class="quiz"> Neither</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz25Correct">Correct!</p>
+                <p class="incorrect" id="quiz25incorrect">Incorrect. Please try again.</p>
+            </div>
             <p><code>new x in { x!(true) }</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> Bound</li>
-                <li><input disabled="" type="checkbox"> Free</li>
-                <li><input disabled="" type="checkbox"> Neither</li>
+                <li><input value="correct"  type="radio" name="quiz26" class="quiz"> Bound</li>
+                <li><input value="incorrect" type="radio" name="quiz26" class="quiz"> Free</li>
+                <li><input value="incorrect" type="radio" name="quiz26" class="quiz"> Neither</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz26Correct">Correct!</p>
+                <p class="incorrect" id="quiz26incorrect">Incorrect. Please try again.</p>
+            </div>
             <p><code>contract x(y) = { 0 }</code></p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> Bound</li>
-                <li><input checked="" disabled="" type="checkbox"> Free</li>
-                <li><input disabled="" type="checkbox"> Neither</li>
+                <li><input value="incorrect" type="radio" name="quiz27" class="quiz"> Bound</li>
+                <li><input value="correct"  type="radio" name="quiz27" class="quiz"> Free</li>
+                <li><input value="incorrect" type="radio" name="quiz27" class="quiz"> Neither</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz27Correct">Correct!</p>
+                <p class="incorrect" id="quiz27incorrect">Incorrect. Please try again.</p>
+            </div>
             <p><code>contract y(x) = { 0 }</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> Bound</li>
-                <li><input disabled="" type="checkbox"> Free</li>
-                <li><input disabled="" type="checkbox"> Neither</li>
+                <li><input value="correct"  type="radio" name="quiz28" class="quiz"> Bound</li>
+                <li><input value="incorrect" type="radio"  name="quiz28" class="quiz"> Free</li>
+                <li><input value="incorrect" type="radio"  name="quiz28" class="quiz"> Neither</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz28Correct">Correct!</p>
+                <p class="incorrect" id="quiz28incorrect">Incorrect. Please try again.</p>
+            </div>
             <p><code>for (y &amp;lt;- @&quot;x&quot;){0}</code></p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> Bound</li>
-                <li><input disabled="" type="checkbox"> Free</li>
-                <li><input checked="" disabled="" type="checkbox"> Neither</li>
+                <li><input value="incorrect" type="radio"  name="quiz29" class="quiz"> Bound</li>
+                <li><input value="incorrect" type="radio" name="quiz29" class="quiz"> Free</li>
+                <li><input value="correct"  type="radio" name="quiz29" class="quiz"> Neither</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz29Correct">Correct!</p>
+                <p class="incorrect" id="quiz29incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="the-new-operator">The <code>new</code> Operator</h2>
             <p><code>for</code> and <code>contract</code> are perfect for binding names inside of continuations. But what if we want to create a bound name to send messages on? For example, our pizza shop would prefer not to have its orders intercepted. We solve this with the <code>new</code> operator.</p>
             <pre class="rholang-file">new pizzaShop, stdout(`rho:io:stdout`) in {
@@ -621,27 +734,39 @@ for (msg &lt;- &commat;"grandma"){
             <p>Second, notice that while this technique does prevent other pizza shops from consuming orders, it also prevents new customers from ordering. We&#39;ll solve this problem in the lesson on bundles.</p>
             <p>What happens when you try to order a pizza fron outside of the <code>new</code> restriction.</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> The order works fine</li>
-                <li><input disabled="" type="checkbox"> The order works but takes much longer</li>
-                <li><input checked="" disabled="" type="checkbox"> Error about top-level free variables</li>
-                <li><input disabled="" type="checkbox"> The code runs, but no order is received</li>
+                <li><input value="incorrect" type="radio" name="quiz30" class="quiz"> The order works fine</li>
+                <li><input value="incorrect" type="radio" name="quiz30" class="quiz"> The order works but takes much longer</li>
+                <li><input value="correct"  type="radio" name="quiz30" class="quiz"> Error about top-level free variables</li>
+                <li><input value="incorrect" type="radio" name="quiz30" class="quiz"> The code runs, but no order is received</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz30Correct">Correct!</p>
+                <p class="incorrect" id="quiz30incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>We learned that all names quote processes. So what process does the <code>pizzaShop</code> name quote? Try printing the process to <code>stdout</code> to see</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> It quotes &quot;pizzaShop&quot;</li>
-                <li><input disabled="" type="checkbox"> It doesn&#39;t quote anything</li>
-                <li><input checked="" disabled="" type="checkbox"> &quot;Some Unforgeable hex code&quot;</li>
+                <li><input value="incorrect" type="radio" name="quiz31" class="quiz"> It quotes &quot;pizzaShop&quot;</li>
+                <li><input value="incorrect" type="radio" name="quiz31" class="quiz"> It doesn&#39;t quote anything</li>
+                <li><input value="correct"  type="radio" name="quiz31" class="quiz"> &quot;Some Unforgeable hex code&quot;</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz31Correct">Correct!</p>
+                <p class="incorrect" id="quiz31incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="private-vs-unforgeable">Private vs Unforgeable</h2>
             <p class="imgWrapper"><img src="/assets/eavesdropping.png" alt="Although the messages can no longer be stolen, they can still be eavesdropped on. You&#39;ve been warned."></p>
             <p><code>new</code> is known as the restriction operator because it restricts use of the bound names that it creates to within it curly braces or &quot;lexical scope&quot;. Within the world of the rholang these new names really are only visible within the correct scope, but remember that human programmers can look in to that world from the outside. That is especially true when working in a blockchain context.</p>
             <p>So while a competing pizza shop can no longer <em>consume</em> pizza orders intended for our shop, they can still read the orders with a block explorer. Occasionally programmers call <code>new</code> names &quot;private&quot;, but a better term is &quot;unforgeable&quot;, which explains the answer to the previous question.</p>
             <p>We&#39;ve previously used <code>new</code> to prevent tuplespace pollution. Why did using unforgeable names prevent us from having to clear the tuplespace after each contract run?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> Because <code>new</code> makes free names</li>
-                <li><input checked="" disabled="" type="checkbox"> Because <code>new</code> creates unforgeable names that can&#39;t be accessed by outside code</li>
-                <li><input disabled="" type="checkbox"> Because <code>new</code> automatically clears the tuplespace</li>
+                <li><input value="incorrect" type="radio" name="quiz32" class="quiz"> Because <code>new</code> makes free names</li>
+                <li><input value="correct"  type="radio" name="quiz32" class="quiz"> Because <code>new</code> creates unforgeable names that can&#39;t be accessed by outside code</li>
+                <li><input value="incorrect" type="radio" name="quiz32" class="quiz"> Because <code>new</code> automatically clears the tuplespace</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz32Correct">Correct!</p>
+                <p class="incorrect" id="quiz32incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="acknowledgement-channels">Acknowledgement Channels</h2>
             <p class="imgWrapper"><img src="/assets/roger.png" alt="We acknowledge communications all the time in conversations"></p>
             <p>One common use of unforgeable names is &quot;acknowledgement channels&quot;, usually called &quot;ack&quot; channels for short. Instead of confirming orders by printing to the screen and disturbing <em>everyone</em>, the pizza shop should really just let the <em>customer</em> know that the order has been placed.</p>
@@ -662,10 +787,14 @@ for (msg &lt;- &commat;"grandma"){
 </pre>
             <p>Why don&#39;t the acknowledgements in the previous example show up on the screen?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> There is a bug in the code</li>
-                <li><input disabled="" type="checkbox"> The orders were not received correctly</li>
-                <li><input checked="" disabled="" type="checkbox"> The confirmation was not sent to <code>stdout</code></li>
+                <li><input value="incorrect" type="radio" name="quiz33" class="quiz"> There is a bug in the code</li>
+                <li><input value="incorrect" type="radio" name="quiz33" class="quiz"> The orders were not received correctly</li>
+                <li><input value="correct"  type="radio" name="quiz33" class="quiz"> The confirmation was not sent to <code>stdout</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz33Correct">Correct!</p>
+                <p class="incorrect" id="quiz33incorrect">Incorrect. Please try again.</p>
+            </div>
             <h3 id="exercise">Exercise</h3>
             <p>The previous example causes tuplespace pollution on the channels <code>@&quot;Alice&quot;</code> and <code>@&quot;Bob&quot;</code>. Fix it so that Alice and Bob both have unforgeable names.</p>
             <h2 id="sending-names-gives-permission">Sending Names Gives Permission</h2>
@@ -687,10 +816,14 @@ for (msg &lt;- &commat;"grandma"){
             <p>In this example we trust the shop to only <em>send</em> on the ack channel, but notice that it could also receive if it wanted to. We&#39;ll learn how to give out only some of those permissions in the next lesson on bundles.</p>
             <p>Bob also wants to order a pizza and give a unforgeable ack channel. Where should he create his unforgeable channel?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> On his own line, after the alice code</li>
-                <li><input disabled="" type="checkbox"> On the same line the Alice did</li>
-                <li><input disabled="" type="checkbox"> On the very first l ine of the program</li>
+                <li><input value="correct"  type="radio" name="quiz34" class="quiz"> On his own line, after the alice code</li>
+                <li><input value="incorrect" type="radio" name="quiz34" class="quiz"> On the same line the Alice did</li>
+                <li><input value="incorrect" type="radio" name="quiz34" class="quiz"> On the very first l ine of the program</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz34Correct">Correct!</p>
+                <p class="incorrect" id="quiz34incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="stdoutack-and-stderrack"><code>stdoutAck</code> and <code>stderrAck</code></h2>
             <p>Now that you understand ack channels, you should know about two other ways to print to the screen. They are channels called <code>stdoutAck</code> and <code>stderrAck</code>. They work just like their cousins from lesson 1, but they take an ack channel.</p>
             <pre class="rholang-file">new myAckChannel,
@@ -718,29 +851,44 @@ for (msg &amp;lt;- myChan) {stdout!(*msg)}</code></p>
             <h2 id="quiz">Quiz</h2>
             <p>Which name is bound in <code>for(x &amp;lt;- y){0}</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>x</code></li>
-                <li><input disabled="" type="checkbox"> <code>y</code></li>
-                <li><input disabled="" type="checkbox"> <code>0</code></li>
+                <li><input value="correct"  type="radio" name="quiz35" class="quiz"> <code>x</code></li>
+                <li><input value="incorrect" type="radio" name="quiz35" class="quiz"> <code>y</code></li>
+                <li><input value="incorrect" type="radio" name="quiz35" class="quiz"> <code>0</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz35Correct">Correct!</p>
+                <p class="incorrect" id="quiz35incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>Which name is bound in <code>new x in {0}</code></p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> <code>x</code></li>
-                <li><input disabled="" type="checkbox"> <code>y</code></li>
-                <li><input disabled="" type="checkbox"> <code>0</code></li>
+                <li><input value="correct"  type="radio" name="quiz36" class="quiz"> <code>x</code></li>
+                <li><input value="incorrect" type="radio" name="quiz36" class="quiz"> <code>y</code></li>
+                <li><input value="incorrect" type="radio" name="quiz36" class="quiz"> <code>0</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz36Correct">Correct!</p>
+                <p class="incorrect" id="quiz36incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>If <code>pizzzaShop</code> is a name, then what is <code>@pizzaShop</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> A name</li>
-                <li><input disabled="" type="checkbox"> A process</li>
-                <li><input checked="" disabled="" type="checkbox"> Invalid syntax</li>
+                <li><input value="incorrect" type="radio" name="quiz37" class="quiz"> A name</li>
+                <li><input value="incorrect" type="radio" name="quiz37" class="quiz"> A process</li>
+                <li><input value="correct"  type="radio" name="quiz37" class="quiz"> Invalid syntax</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz37Correct">Correct!</p>
+                <p class="incorrect" id="quiz37incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>Why did the pizzaShopAck code send <code>&quot;bob&quot;</code> as an ack channel instead of <code>@&quot;bob&quot;</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> No reason; it&#39;s just a style choice.</li>
-                <li><input checked="" disabled="" type="checkbox"> Because @&quot;bob&quot; is a name, but we have to send processes.</li>
-                <li><input disabled="" type="checkbox"> That&#39;s special syntax for ack channels.</li>
+                <li><input value="incorrect" type="radio" name="quiz38" class="quiz"> No reason; it&#39;s just a style choice.</li>
+                <li><input value="correct"  type="radio" name="quiz38" class="quiz"> Because @&quot;bob&quot; is a name, but we have to send processes.</li>
+                <li><input value="incorrect" type="radio" name="quiz38" class="quiz"> That&#39;s special syntax for ack channels.</li>
             </ul>
-
+            <div class="quizResponse">
+                <p class="correct" id="quiz38Correct">Correct!</p>
+                <p class="incorrect" id="quiz38incorrect">Incorrect. Please try again.</p>
+            </div>
         </div>
 
         <div class="card" id="bundlesSection">
@@ -882,11 +1030,15 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
 </pre>
             <p>Who will catch the ball in the jackpot code?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> Bill because his catch code is first.</li>
-                <li><input disabled="" type="checkbox"> Bill because his catch code is closest to the throw code.</li>
-                <li><input disabled="" type="checkbox"> Paige because her catch code is last.</li>
-                <li><input checked="" disabled="" type="checkbox"> We don&#39;t know; it is nondeterminate.</li>
+                <li><input value="incorrect" type="radio" name="quiz39" class="quiz"> Bill because his catch code is first.</li>
+                <li><input value="incorrect" type="radio" name="quiz39" class="quiz"> Bill because his catch code is closest to the throw code.</li>
+                <li><input value="incorrect" type="radio" name="quiz39" class="quiz"> Paige because her catch code is last.</li>
+                <li><input value="correct"  type="radio" name="quiz39" class="quiz"> We don&#39;t know; it is nondeterminate.</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz39Correct">Correct!</p>
+                <p class="incorrect" id="quiz39incorrect">Incorrect. Please try again.</p>
+            </div>
             <h3 id="exercise">Exercise</h3>
             <p>Exercise: Use stdoutAck to display how many points each person actually gets when they catch the ball.</p>
             <!-- solution in jackpotNicePrinting.rho -->
@@ -894,19 +1046,27 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <p>Most programming languages will allow you to join or &quot;concatenate&quot; two strings together, and rholang is no exception. We can <code>stdout!(&quot;Hello &quot; ++ &quot;world&quot;)</code>, but we can&#39;t concatenate a string with an int. That&#39;s why we had to use that <code>stdoutAck</code> trick. Another option is to print a list <code>stdout!([&quot;Bill caught it. Points earned: &quot;, *points])</code>. We&#39;ll go into more detail about both techniques in future lessons.</p>
             <p>How is this game in rholang different than the real game where one ball is throw repeatedly?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> It is a very accurate simulation</li>
-                <li><input checked="" disabled="" type="checkbox"> In rholang all balls are thrown at once and caught in any order</li>
-                <li><input disabled="" type="checkbox"> In rholang the balls are caught in the reverse order from what they are thrown.</li>
-                <li><input disabled="" type="checkbox"> In rholang Bill makes all his catches, then Paige makes all her catches.</li>
+                <li><input value="incorrect" type="radio" name="quiz40" class="quiz"> It is a very accurate simulation</li>
+                <li><input value="correct"  type="radio" name="quiz40" class="quiz"> In rholang all balls are thrown at once and caught in any order</li>
+                <li><input value="incorrect" type="radio" name="quiz40" class="quiz"> In rholang the balls are caught in the reverse order from what they are thrown.</li>
+                <li><input value="incorrect" type="radio" name="quiz40" class="quiz"> In rholang Bill makes all his catches, then Paige makes all her catches.</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz40Correct">Correct!</p>
+                <p class="incorrect" id="quiz40incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="imposter-throws">Imposter throws</h2>
             <p>Notice that anyone can come along and mess up this game by throwing fake balls. This is just the opposite of Eve coming along and stealing Alice&#39;s fanmail.</p>
             <p>What code would Eve have to par in to throw an imposter ball worth 100 points?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> for (imposter &lt;- throw){imposter!(100)}</li>
-                <li><input checked="" disabled="" type="checkbox"> throw!(100)</li>
-                <li><input disabled="" type="checkbox"> @&quot;throw&quot;!(&quot;100&quot;)</li>
+                <li><input value="incorrect" type="radio" name="quiz41" class="quiz"> for (imposter &lt;- throw){imposter!(100)}</li>
+                <li><input value="correct"  type="radio" name="quiz41" class="quiz"> throw!(100)</li>
+                <li><input value="incorrect" type="radio" name="quiz41" class="quiz"> @&quot;throw&quot;!(&quot;100&quot;)</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz41Correct">Correct!</p>
+                <p class="incorrect" id="quiz41incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>We solve this problem by making sure that the public can only read from the throw channel, but not write to it.</p>
             <pre class="rholang-file">new gameCh, stdout(`rho:io:stdout`) in {
   new throw in {
@@ -994,18 +1154,26 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
 </pre>
             <p>What data gets sent to <code>@somePublicChannel</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> 0</li>
-                <li><input disabled="" type="checkbox"> box</li>
-                <li><input checked="" disabled="" type="checkbox"> 42</li>
-                <li><input disabled="" type="checkbox"> It is empty</li>
+                <li><input value="incorrect" type="radio" name="quiz42" class="quiz"> 0</li>
+                <li><input value="incorrect" type="radio" name="quiz42" class="quiz"> box</li>
+                <li><input value="correct"  type="radio" name="quiz42" class="quiz"> 42</li>
+                <li><input value="incorrect" type="radio" name="quiz42" class="quiz"> It is empty</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz42Correct">Correct!</p>
+                <p class="incorrect" id="quiz42incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What data is left in the <code>boxCh</code> state channel?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> 0</li>
-                <li><input disabled="" type="checkbox"> @&quot;somePublicBox&quot;</li>
-                <li><input disabled="" type="checkbox"> 42</li>
-                <li><input checked="" disabled="" type="checkbox"> It is empty</li>
+                <li><input value="incorrect" type="radio" name="quiz43" class="quiz"> 0</li>
+                <li><input value="incorrect" type="radio" name="quiz43" class="quiz"> @&quot;somePublicBox&quot;</li>
+                <li><input value="incorrect" type="radio" name="quiz43" class="quiz"> 42</li>
+                <li><input value="correct"  type="radio" name="quiz43" class="quiz"> It is empty</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz43Correct">Correct!</p>
+                <p class="incorrect" id="quiz43incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="persisting-data">Persisting Data</h2>
             <p>If we were to check the box again, we would not get a result. Because once we receive the message, it gets consumed from the tuplespace. We briefly discussed the solution back in our lesson on persistent sends and peeks.</p>
             <pre class="rholang-file">new boxCh in {
@@ -1025,18 +1193,26 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
 </pre>
             <p>What data gets sent to <code>@somePublicChannel</code>?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> 0</li>
-                <li><input disabled="" type="checkbox"> box</li>
-                <li><input checked="" disabled="" type="checkbox"> 42</li>
-                <li><input disabled="" type="checkbox"> It is empty</li>
+                <li><input value="incorrect" type="radio" name="quiz44" class="quiz"> 0</li>
+                <li><input value="incorrect" type="radio" name="quiz44" class="quiz"> box</li>
+                <li><input value="correct"  type="radio" name="quiz44" class="quiz"> 42</li>
+                <li><input value="incorrect" type="radio" name="quiz44" class="quiz"> It is empty</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz44Correct">Correct!</p>
+                <p class="incorrect" id="quiz44incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>What data is left in the <code>boxCh</code> state channel?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> 0</li>
-                <li><input disabled="" type="checkbox"> @&quot;somePublicBox&quot;</li>
-                <li><input checked="" disabled="" type="checkbox"> 42</li>
-                <li><input disabled="" type="checkbox"> It is empty</li>
+                <li><input value="incorrect" type="radio" name="quiz45" class="quiz"> 0</li>
+                <li><input value="incorrect" type="radio" name="quiz45" class="quiz"> @&quot;somePublicBox&quot;</li>
+                <li><input value="correct"  type="radio" name="quiz45" class="quiz"> 42</li>
+                <li><input value="incorrect" type="radio" name="quiz45" class="quiz"> It is empty</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz45Correct">Correct!</p>
+                <p class="incorrect" id="quiz45incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="patience-game-revisited">Patience Game Revisited</h2>
             <p>A few lessons back we discussed the patience game, where each player hopes to be the last one to send a message to the contract. We had some problems back then because we couldn&#39;t guarantee that a result of the game would ever be output.</p>
             <p>Take a minute to remind yourself of the problem we had. With a state channel, we can solve this problem properly.</p>
@@ -1066,10 +1242,14 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
 </pre>
             <p>How does the above code avoid the problem of each block getting called once?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> By forcing player one to use the top block</li>
-                <li><input checked="" disabled="" type="checkbox"> Because after the first call <code>activeCh</code> is empty</li>
-                <li><input disabled="" type="checkbox"> Because state channel make things sequential</li>
+                <li><input value="incorrect" type="radio" name="quiz46" class="quiz"> By forcing player one to use the top block</li>
+                <li><input value="correct"  type="radio" name="quiz46" class="quiz"> Because after the first call <code>activeCh</code> is empty</li>
+                <li><input value="incorrect" type="radio" name="quiz46" class="quiz"> Because state channel make things sequential</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz46Correct">Correct!</p>
+                <p class="incorrect" id="quiz46incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="objects-and-methods">Objects and Methods</h2>
             <p class="imgWrapper"><img src="/assets/clickCounter.png" alt="This click-counter can be incremented and reset"></p>
             <p>In &quot;Object Oriented Programming&quot; languages such as java, we can model real-world objects by encapsulating some data along with methods that use or change the data. The same thing is possible in rholang.</p>
@@ -1163,18 +1343,26 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
 </pre>
             <p>How would a user call the factory to get a new counter?</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>counterFactory!(*ack)</code></li>
-                <li><input disabled="" type="checkbox"> <code>counterFactory!(0, *ack)</code></li>
-                <li><input disabled="" type="checkbox"> <code>@&quot;counterFactory&quot;()</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>counterFactory!(myIncrease, myReset)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz47" class="quiz"> <code>counterFactory!(*ack)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz47" class="quiz"> <code>counterFactory!(0, *ack)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz47" class="quiz"> <code>@&quot;counterFactory&quot;()</code></li>
+                <li><input value="correct"  type="radio" name="quiz47" class="quiz"> <code>counterFactory!(myIncrease, myReset)</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz47Correct">Correct!</p>
+                <p class="incorrect" id="quiz47incorrect">Incorrect. Please try again.</p>
+            </div>
             <p>How would a user reset their counter after creating as indicated above.</p>
             <ul class="quiz">
-                <li><input disabled="" type="checkbox"> <code>myIncrease!(*ack)</code></li>
-                <li><input checked="" disabled="" type="checkbox"> <code>myReset!(*ack)</code></li>
-                <li><input disabled="" type="checkbox"> <code>counterFactory!(myReset, *ack)</code></li>
-                <li><input disabled="" type="checkbox"> <code>counterFactory!(myReset)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz48" class="quiz"> <code>myIncrease!(*ack)</code></li>
+                <li><input value="correct"  type="radio" name="quiz48" class="quiz"> <code>myReset!(*ack)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz48" class="quiz"> <code>counterFactory!(myReset, *ack)</code></li>
+                <li><input value="incorrect" type="radio" name="quiz48" class="quiz"> <code>counterFactory!(myReset)</code></li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz48Correct">Correct!</p>
+                <p class="incorrect" id="quiz48incorrect">Incorrect. Please try again.</p>
+            </div>
             <h2 id="method-dispatching">Method Dispatching</h2>
             <p>There are two primary techniques for making methods available. The first option I call &quot;separation of powers&quot; because each method listens on its own dedicated channel.</p>
             <p>Another option is the &quot;control panel&quot; technique where there is a single unforgeable name called the control panel and all the methods are built on it.</p>
@@ -1191,9 +1379,13 @@ contract factory(cPanel) = {
 }</pre>
             <p>Which technique did the counter example use to dispatch methods?</p>
             <ul class="quiz">
-                <li><input checked="" disabled="" type="checkbox"> Separation of Powers</li>
-                <li><input disabled="" type="checkbox"> Control Panel</li>
+                <li><input value="correct"  type="radio" name="quiz49" class="quiz"> Separation of Powers</li>
+                <li><input value="incorrect" type="radio" name="quiz49" class="quiz"> Control Panel</li>
             </ul>
+            <div class="quizResponse">
+                <p class="correct" id="quiz49Correct">Correct!</p>
+                <p class="incorrect" id="quiz49incorrect">Incorrect. Please try again.</p>
+            </div>
             <h3 id="exercise">Exercise</h3>
             <p>Convert the counter example to use the other method dispatching technique. You should convert the tests too.</p>
 

@@ -92,6 +92,20 @@
     padding: 2rem 0 6rem 20rem;
 }
 
+.section#toContentsSection .quizResponse .correct {
+    color: green;
+    display: none;
+    font-family: Dosis-Bold;
+    font-size: 1.5rem;
+}
+
+.section#toContentsSection .quizResponse .incorrect {
+    color: red;
+    display: none;
+    font-family: Dosis-Bold;
+    font-size: 1.5rem;
+}
+
 .section#toContentsSection .lesson > .card {
     background: white;
     -webkit-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
@@ -116,9 +130,16 @@
 
 pre.rholang-file, pre.inline-code {
     background: #D3D3D3;
-    display: inline-block;
+    display: block;
     margin: 0 0 1rem;
     padding: .5rem;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre, code {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .section#toContentsSection .lesson > .card > h6 {

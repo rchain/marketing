@@ -320,7 +320,7 @@ li {
     text-decoration: none;
 }
 
-.nav .item .dropdown a:nth-child(1), .nav .item .dropdown a:nth-child(2) {
+.nav .item .dropdown a:nth-child(1), .nav .item .dropdown a:nth-child(2), .nav .item .dropdown a:nth-child(3), .nav .item .dropdown a:nth-child(4) {
     margin-bottom: 1rem;
 }
 
@@ -440,6 +440,7 @@ li {
     font-size: .8rem;
     padding: .5rem;
     margin: 0 .7rem;
+    text-decoration: none;
 }
 
 #footer > .wrapper:nth-child(2) a {

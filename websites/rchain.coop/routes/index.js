@@ -64,6 +64,18 @@ router.get('/rchain-cooperative', function (req, res) {
     });
 });
 
+router.get('/leadership', function (req, res) {
+    res.render('leadership', {
+        title: 'RChain Leadership',
+        style: 'leadership',
+        ogtitle: 'RChain Leadership',
+        ogdescription: "",
+        ogurl: 'https://rchain.coop/leadership',
+        ogimg: '',
+        scripts: ''
+    });
+});
+
 /* POST Newsletter signup. */
 router.post('/newsletter-submission', function (req, res) {
     var success = ["success"];
