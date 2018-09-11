@@ -141,7 +141,7 @@ p, li {
 .section#quoteSection h6 {
     color: white;
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -314,6 +314,9 @@ p, li {
         padding: 3vw 0;
         width: 90%;
     }
+    .section#leadershipSection {
+        padding: 1rem;
+    }
     
 }
 
@@ -349,6 +352,15 @@ p, li {
     .section#rchainSection > .wrapper > .textWrapper {
         width: auto;
     }
+    .section#quoteSection {
+        padding: 2rem;
+    }
+    .section#quoteSection p > span:nth-child(1) {
+        left: -1.5rem;
+    }
+    .section#quoteSection h6 {
+        margin: 1rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -357,5 +369,8 @@ p, li {
     }
     .section#rchainSection .flexWrapper .textWrapper {
         width: 100%;
+    }
+    .section#quoteSection p > span:nth-child(2) {
+        bottom: -2rem;
     }
 }

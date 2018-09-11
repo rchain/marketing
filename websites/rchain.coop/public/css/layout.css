@@ -121,9 +121,14 @@ li {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.nav .item > a:not(.btn-blue) {
+    color: #a50034;
+    padding: .4rem .7rem 1.5rem;
+}
+
 .nav.scroll .item > a:not(.btn-blue) {
     color: #a50034;
-    padding: .4rem .7rem 1rem;
+    padding: .4rem .7rem .8rem;
 }
 
 .nav.scroll .item a.btn-blue {
@@ -236,6 +241,10 @@ li {
     margin: 1.15rem 2.5rem 0;
 }
 
+.nav .item.links:hover:nth-child(2) a, .nav .item.links:hover:nth-child(3) a, .nav .item.links:hover:nth-child(4) a {
+    color: #a50034;
+} 
+
 .nav .item#hamburger {
     display: none;
 }
@@ -300,7 +309,6 @@ li {
     text-decoration: none;
     color: black;
     outline: 0;
-    padding: .4rem .7rem 1.5rem;
 }
 
 .nav .item:nth-child(5) {
@@ -315,12 +323,12 @@ li {
     font-size: .9rem;
 }
 
-.nav .item  .dropdown {
+.nav .item .dropdown {
     border: 1px solid black;
     display: none;
     position: absolute;
     text-align: left;
-    top: 40px;
+    top: 30px;
     left: .8rem;
 }
 
@@ -339,7 +347,7 @@ li {
     display: block;
     background: white;
     padding: .7rem 1.5rem .7rem .7rem;
-    width: auto;
+    width: 14rem;
     z-index: 5;
 }
 
@@ -568,6 +576,9 @@ li {
     .nav .item {
         margin: 1rem .5rem 0;
     }
+    .nav .item.links:hover:nth-child(2), .nav .item.links:hover:nth-child(3), .nav .item.links:nth-child(2), .nav .item.links:nth-child(3), .nav .item.links:nth-child(4) {
+        margin: 1.15rem .9rem 0;
+    }
     .nav .wrapper .item:nth-child(1) {
         left: 1vw;
     }
@@ -648,7 +659,7 @@ li {
     }
     .nav.scroll .item > a:not(.btn-blue) {
         color: black;
-        padding: .4rem .7rem 1rem;
+        padding: .4rem 0;
     }
     .nav {
         background: white;
@@ -661,8 +672,11 @@ li {
         height: 360px;
         overflow: visible;
     }
+    .nav.active.scroll {
+        padding: 1.2rem 0;
+    }
     .nav .item {
-        font-size: 4vw;
+        font-size: 2.2rem;
     }
     .nav .item:nth-child(5) {
         margin-left: .5rem;
@@ -680,17 +694,33 @@ li {
         width: 7rem;
     }
     .nav .item:nth-child(2) {
-        margin: 0;
-        width: 7rem;
+        width: 7.6rem;
+    }
+    .nav .item:nth-child(3) {
+        width: 13rem;
+    }
+    .nav .item:nth-child(4) {
+        width: 15rem;
     }
     .nav .item.links,
     .nav .item.btn-red {
         display: block;
         text-align: left;
     }
-    .nav .item.links {
-        padding: .5rem;
-        margin: 0 0 0;
+    .nav .item > a:not(.btn-blue) {
+        padding: .4rem 0;
+    }
+    .nav .item.links:hover:nth-child(2), .nav .item.links:hover:nth-child(3), .nav .item.links:nth-child(2), .nav .item.links:nth-child(3), .nav .item.links:nth-child(4) {
+        margin: 0 0 .5rem 1rem;
+    }
+    .nav .item:hover .dropdown {
+        width: 20rem;
+    }
+    .nav .item .dropdown {
+        top: 40px;
+    }
+    .nav .item .dropdown a {
+        font-size: 1.2rem;
     }
     .nav .item a:not(.btn-blue) {
         color: black;
@@ -751,9 +781,6 @@ li {
     .nav .item#hamburger a > span:nth-child(2) {
         line-height: 1;
     }
-    .nav .item .dropdown {
-        top: 50px;
-    }
     .section {
         padding: 0 2rem 0;
     }
@@ -803,7 +830,9 @@ li {
         padding: 0 .7rem 1rem;
     }
     .btn-blue {
-        width: 100%;
+        display: block;
+        margin: auto;
+        width: 95%;
     }
     .nav .item {
         font-size: 2rem;
@@ -815,6 +844,12 @@ li {
         left: 1rem;
         top: 0;
         width: 7rem;
+    }
+    .nav .item .dropdown {
+        left: 0;
+    }
+    .nav .item:hover .dropdown {
+        width: auto;
     }
     .nav .item#hamburger {
         right: 0;

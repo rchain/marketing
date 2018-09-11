@@ -21,7 +21,7 @@ p, li {
 }
 
 .section#rchainSection {
-    padding: 11rem 4rem 0;
+    padding: 11rem 4rem 2rem;
 }
 
 .section#rchainSection > h1 {
@@ -68,21 +68,6 @@ p, li {
 
 .section#rchainSection .wrapper .textWrapper p {
     margin: 0;
-}
-
-.section#rchainSection > div:nth-last-child(1) {
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-.section#rchainSection > div:nth-last-child(1) a {
-    border: 1px solid #50badd;
-    border-radius: .2rem;
-    color: #50badd;
-    display: inline-block;
-    font-size: 1.4rem;
-    padding: 1.2rem 2rem;
-    text-decoration: none;
 }
 
 .section#rhoSection {
@@ -373,6 +358,7 @@ p, li {
         display: block;
     }
     .section#posSection .flexWrapper .imgWrapper {
+        padding: 0 8rem;
         width: auto;
     }
     .section#posSection .flexWrapper .textWrapper {
@@ -460,6 +446,10 @@ p, li {
         display: block;
     }
     .section#rhoSection > .flexWrapper > .flexWrapper p {
+        width: auto;
+    }
+    .section#posSection .flexWrapper .imgWrapper {
+        padding: 0 4rem;
         width: auto;
     }
     .section#posSection .flexWrapper .textWrapper ul {

@@ -9,7 +9,25 @@ body {
 
 .nav .item > a:not(.btn-blue) {
     color: white;
+    padding: .4rem .7rem;
 }
+
+.nav .item.links:hover:nth-child(2), .nav .item.links:hover:nth-child(3) {
+    border-bottom: 3px solid transparent;
+}
+
+.nav.scroll .item.links:hover:nth-child(2), .nav.scroll .item.links:hover:nth-child(3) {
+    border-bottom: 3px solid #a50034;
+    margin: 1.15rem 2.5rem 0;
+}
+
+.nav .item.links:hover:nth-child(2) a, .nav .item.links:hover:nth-child(3) a, .nav .item.links:hover:nth-child(4) a {
+    color: black;
+} 
+
+.nav.scroll .item.links:hover:nth-child(2) a, .nav.scroll .item.links:hover:nth-child(3) a, .nav.scroll .item.links:hover:nth-child(4) a {
+    color: #a50034;
+} 
 
 .section {}
 
@@ -339,6 +357,9 @@ body {
     body {
         padding: 0 0 262.5px;
     }
+    .nav.scroll .item.links:hover:nth-child(2), .nav.scroll .item.links:hover:nth-child(3), .nav.scroll .item.links:nth-child(2), .nav.scroll .item.links:nth-child(3), .nav.scroll .item.links:nth-child(4) {
+        margin: 1.15rem .9rem 0;
+    }
     .section#headerSection {
         padding: 8rem 4rem 0;
     }
@@ -423,6 +444,24 @@ body {
     }
     .nav.active .item img.white, .nav .item img.white {
         visibility: hidden;
+    }
+    .nav .item.links:hover:nth-child(2), .nav .item.links:hover:nth-child(3), .nav .item.links:nth-child(2), .nav .item.links:nth-child(3), .nav .item.links:nth-child(4) {
+        margin: 0 0 .5rem 1rem;
+    }
+    .nav.scroll .item.links:hover:nth-child(2), .nav.scroll .item.links:hover:nth-child(3), .nav.scroll .item.links:nth-child(2), .nav.scroll .item.links:nth-child(3), .nav.scroll .item.links:nth-child(4) {
+        margin: 0 0 .5rem 1rem;
+    }
+    .nav .item.links:hover:nth-child(2), .nav .item.links:hover:nth-child(3) {
+        border-bottom: 3px solid #a50034;
+    }
+    .nav .item.links:hover:nth-child(2) a, .nav .item.links:hover:nth-child(3) a, .nav .item.links:hover:nth-child(4) a {
+        color: #a50034;
+    }
+    .nav .item .dropdown {
+        top: 40px;
+    }
+    .nav .item > a:not(.btn-blue) {
+        padding: .4rem 0;
     }
     .nav .item#hamburger span p {
         background: black;
