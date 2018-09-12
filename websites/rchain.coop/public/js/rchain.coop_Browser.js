@@ -27,6 +27,17 @@ function menuExpand() {
     }
 }
 
+document.getElementById("dropdown").onclick = dropdown;
+
+function dropdown() {
+    var dropdown = document.getElementById("dropdown");
+    if (dropdown.classList.contains("active")){
+        dropdown.classList.remove("active");
+    } else {
+        dropdown.classList.add("active");
+    }
+}
+
 
 
 /* Footer Form */

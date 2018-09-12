@@ -429,7 +429,7 @@ body {
         border-bottom: 1px solid black;
     }
     .nav .item > a:not(.btn-blue) {
-        color: black;
+        color: #4e4e4e;
     }
     .nav.active .item img.red, .nav .item img.red {
         visibility: visible;
@@ -454,9 +454,6 @@ body {
     }
     .nav .item > a:not(.btn-blue) {
         padding: .4rem 0;
-    }
-    .nav .item#hamburger span p {
-        background: black;
     }
     .section#headerSection {
         background: url(/assets/mobile-background1.png);

@@ -11,10 +11,6 @@ p, li {
     visibility: visible;
 }
 
-.nav .item#hamburger span p {
-    background: black;
-}
-
 .section#headerSection .textWrapper {
     text-align: center;
 }
@@ -133,7 +129,7 @@ p, li {
 
 .section#developerSection .tabContent {
     display: none;
-    height: 700px;
+    height: 500px;
     width: 70%;
 }
 
@@ -263,6 +259,7 @@ p, li {
         width: auto;
     }
     .section#developerSection .tabContent {
+        height: 650px;
         width: 95%;
     }
     .section#developerSection .flexWrapper {
@@ -320,6 +317,9 @@ p, li {
     }
     .section#developerSection #tab .item {
         font-size: 4vw;
+    }
+    .section#developerSection .tabContent {
+        height: 600px;
     }
     .section#developerSection .tabContent > .textWrapper h2 {
         font-size: 6vw;

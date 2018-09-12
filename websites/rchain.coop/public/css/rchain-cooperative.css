@@ -15,10 +15,6 @@ p, li {
     color: #4e4e4e;
 }
 
-.nav .item#hamburger span p {
-    background: black;
-}
-
 .section#rchainSection {
     background-image: linear-gradient(to top, #42022e, #ab0433);
     padding: 4rem;

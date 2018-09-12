@@ -390,7 +390,7 @@ li {
     margin-bottom: 1rem;
 }
 
-.nav .item:hover .dropdown {
+.nav .item:hover .dropdown, .nav .item .dropdown.active {
     display: block;
     background: white;
     padding: .7rem 1.5rem .7rem .7rem;
@@ -705,7 +705,7 @@ li {
         margin: 1rem auto;
     }
     .nav.scroll .item > a:not(.btn-blue) {
-        color: black;
+        color: #4e4e4e;
         padding: .4rem 0;
     }
     .nav {
@@ -770,7 +770,7 @@ li {
         font-size: 1.2rem;
     }
     .nav .item a:not(.btn-blue) {
-        color: black;
+        color: #4e4e4e;
     }
     .nav .item > a:not(.btn-blue) .arrow {
         font-family: Montserrat-Regular;
@@ -780,8 +780,8 @@ li {
     .nav.scroll .item#hamburger {
         top: .8rem;
     }
-    .nav.scroll .item#hamburger span p, .nav.active .item#hamburger span p {
-        background: black;
+    .nav.scroll .item#hamburger span p, .nav.active .item#hamburger span p,.nav .item#hamburger span p {
+        background: #4e4e4e;
     }
     .nav.scroll .wrapper .item:nth-child(1) {
         top: .8rem;

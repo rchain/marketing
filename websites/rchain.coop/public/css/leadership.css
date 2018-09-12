@@ -16,10 +16,6 @@ p, li {
     color: #4e4e4e;
 }
 
-.nav .item#hamburger span p {
-    background: black;
-}
-
 .section#rchainSection {
     padding: 4rem;
 }

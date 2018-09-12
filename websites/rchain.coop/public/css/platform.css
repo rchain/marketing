@@ -16,12 +16,8 @@ p, li {
     color: #4e4e4e;
 }
 
-.nav .item#hamburger span p {
-    background: black;
-}
-
 .section#rchainSection {
-    padding: 11rem 4rem 2rem;
+    padding: 4rem 4rem 2rem;
 }
 
 .section#rchainSection > h1 {
@@ -255,7 +251,7 @@ p, li {
 
 @media (max-width: 960px) {
     .section#rchainSection {
-        padding: 8rem 2rem 0;
+        padding: 4rem;
     }
     .section#rchainSection > h1 {
         font-size: 1.6rem;
@@ -314,7 +310,7 @@ p, li {
         font-size: .9rem;
     }
     .section#rchainSection {
-        padding: 6rem .7rem 0;
+        padding: 2rem .7rem;
     }
     .section#rchainSection > .wrapper {
         width: 100%;
@@ -334,6 +330,9 @@ p, li {
     }
     .section#rhoSection {
         padding: 2rem .7rem;
+    }
+    .section#rhoSection > div:nth-child(1) p {
+        margin: 0 0 2rem;
     }
     .section#rhoSection > div:nth-child(1) h2 {
         font-size: 1.6rem;
