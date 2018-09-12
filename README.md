@@ -1,3 +1,3 @@
 # Welcome to the RChain Marketing Repo
 
-We just set this up and will expand this welcome later. 
+This is a public resource for RChain Marketing assets and applications. 
