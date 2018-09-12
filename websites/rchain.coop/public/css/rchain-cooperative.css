@@ -12,7 +12,7 @@ p, li {
 }
 
 .nav .item a:not(.btn-blue) {
-    color: black;
+    color: #4e4e4e;
 }
 
 .nav .item#hamburger span p {
@@ -192,16 +192,9 @@ p, li {
 
 .section#posSection .flexWrapper .textWrapper ul li:nth-child(2) span:nth-child(2) {}
 
-.section#posSection .flexWrapper .textWrapper a {
-    border: 1px solid #50badd;
-    border-radius: .2rem;
-    color: #50badd;
-    display: inline-block;
-    font-size: 1.4rem;
+
+.section#posSection .flexWrapper .textWrapper .btn-blue2 {
     max-width: 460px;
-    padding: 1.2rem 2rem;
-    text-align: center;
-    text-decoration: none;
     width: 100%;
 }
 
@@ -601,11 +594,6 @@ p, li {
     }
     .section#posSection .flexWrapper .textWrapper ul {
         padding: 0 0 0 1.5rem;
-    }
-    .section#posSection .flexWrapper .textWrapper a {
-        font-size: 4vw;
-        padding: 3vw 0;
-        width: 90%;
     }
     .section#communitySection > div:nth-child(1) {
         width: 100%;

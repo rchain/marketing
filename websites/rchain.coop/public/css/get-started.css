@@ -298,6 +298,7 @@ p, li {
         width: auto;
     }
     .section#developerSection .tabContent > .flexWrapper .imgWrapper {
+        padding: 0 8rem;
         width: auto;
     }
     .section#developerSection .tabContent > .flexWrapper .textWrapper .list div p:nth-child(1) {
@@ -322,6 +323,9 @@ p, li {
     }
     .section#developerSection .tabContent > .textWrapper h2 {
         font-size: 6vw;
+    }
+    .section#developerSection .tabContent > .flexWrapper .imgWrapper {
+        padding: 0 4rem;
     }
 }
 

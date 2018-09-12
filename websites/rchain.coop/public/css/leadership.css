@@ -13,7 +13,7 @@ p, li {
 }
 
 .nav .item a:not(.btn-blue) {
-    color: black;
+    color: #4e4e4e;
 }
 
 .nav .item#hamburger span p {

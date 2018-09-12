@@ -185,15 +185,7 @@ body {
     text-align: center;
 }
 
-.section#rhoSection > div:nth-last-child(1) a {
-    border: 1px solid #50badd;
-    border-radius: .2rem;
-    color: #50badd;
-    display: inline-block;
-    font-size: 1.3rem;
-    padding: 1.2rem 2rem;
-    text-decoration: none;
-}
+
 
 .section#communitySection {
     background: #fafafa;
@@ -621,10 +613,6 @@ body {
     }
     .section#rhoSection > h1 {
         font-size: 7.5vw;
-    }
-    .section#rhoSection > div:nth-last-child(1) a {
-        font-size: 4vw;
-        padding: 3vw 5vw;
     }
     .section#rhoSection > div:nth-last-child(1) {
         margin-bottom: 1rem;
