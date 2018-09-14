@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89148892-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-89148892-1');
+
+    </script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <meta name="google-site-verification" content="NvXu2Qnyi90bS-ubPtaorKKja1_p8SHfQ0zPoqG0sIg" />
+    <link rel='stylesheet' href='/css/layout.css' />
+    <link rel='stylesheet' href='/css/fonts.css' />
+    <link rel='stylesheet' href='/css/{{style}}.css' />
+    <link rel="shortcut icon" href="/assets/rchain-community@3x.png" />
+    <meta property="og:title" content="{{ogtitle}}" />
+    <meta property="og:type" content="website" />
+    <meta name="description" content="{{ogdescription}}" />
+    <meta property="og:description" content="{{ogdescription}}" />
+    <meta property="og:url" content="{{ogurl}}" />
+    <meta property="og:image" content="{{ogimg}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ogtitle}}" />
+    <meta name="twitter:image" content="{{ogimg}}" />
+    <meta name="twitter:url" content="{{ogurl}}" />
+    <meta name="twitter:description" content="{{ogdescription}}" />
+
+</head>
+
+<body>
+    <!--  Navbar Start -->
+    <header>
+        <div class="nav" id="nav">
+            <div id="navClose" onclick="navClose()">X</div>
+            <div class="wrapper">
+                <div class="item">
+                    <img src="/assets/logo_white.png" class="white" id="white">
+                    <img src="/assets/logo_red.png" class="red" id="red">
+                </div>
+                <div class="item links" onclick="">
+                    <a href="/">Home</a>
+                </div>
+                <div class="item links" onclick="">
+                    <a href="/platform">Platform</a>
+                </div>
+                <div class="item links" id="dropdown">
+                    <a href="javascript:void(0)">Community<span class="arrow">&rsaquo;</span></a>
+                    <div class="dropdown">
+                        <a href="/rchain-cooperative">Community Overview</a>
+                        <a href="leadership">Leadership</a>
+                        <a href="https://blog.rchain.coop/" target="_blank">Blog</a>
+                        <a href="learn-rholang">Tutorials</a>
+                        <a href="https://developer.rchain.coop/" target="_blank">Developers</a>
+                    </div>
+                </div>
+                <div class="item links">
+                    <a href="/get-started" class="btn-blue">Get Started</a>
+                </div>
+                <div class="item" id="hamburger">
+                    <a href="javascript:void(0)"><span><p id="bar1"></p><p id="bar2"></p><p id="bar3"></p></span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar End -->
+
+    <div class="bodyWrapper">
+        {{{body}}}
+    </div>
+
+
+    <div id="footer">
+        <div class="wrapper">
+            <div>
+                <a href="leadership">Leadership</a>
+                <a href="platform">Platform</a>
+                <a href="rchain-cooperative">Community</a>
+                <a href="https://developer.rchain.coop/conference">Events</a>
+                <a href="https://blog.rchain.coop/">Blog</a>
+            </div>
+            <div class="wrapper">
+                <div>
+                    <div id="submitSuccess"></div>
+                    <div id="submitFail"></div>
+                </div>
+                <form id="newsletterForm">
+                    <div class="inputWrapper">
+                        <label for="email">Sign up for our newsletter</label><br>
+                        <input type="text" placeholder="Email" name="email" class="text" id="email" required>
+                    </div>
+                    <button id="newsletterSubmit">Subscribe</button>
+                </form>
+            </div>
+            <img src="/assets/r-chain-horizontal-logo-final-white@3x.png">
+        </div>
+        <div class="wrapper">
+            <div class="imgWrapper"><img src="/assets/coop-logo@3x.png"></div>
+            <p>copyright &copy; 2018 RChain Cooperative All rights reserved</p>
+            <div>
+                <a>privacy</a>
+                <a>terms and conditions</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/rchain.coop_Browser.js"></script>
+    <script src="{{ scripts }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+p, li {
+    font-size: 1.25rem;    
+}
+
+.nav .item img.red {
+    display: inline;
+    visibility: visible;
+}
+
+.nav .item img.white {
+    display: none;
+}
+
+.nav .item a:not(.btn-blue) {
+    color: #4e4e4e;
+}
+
+.section#rchainSection {
+    background-image: linear-gradient(to top, #42022e, #ab0433);
+    padding: 4rem;
+}
+
+.section#rchainSection > h1 {
+    color: white;
+    font-size: 2.4rem;
+    margin: 0 auto .7rem;
+    text-align: center;
+}
+
+.section#rchainSection > p {
+    color: white;
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.section#rchainSection > p:nth-child(2) {
+    margin-bottom: 2rem;
+}
+
+.section#rchainSection .wrapper {
+    display: inline-block;
+    padding-top: 8rem;
+    width: 49%;
+    vertical-align: top;
+}
+
+.section#rchainSection > .wrapper:nth-child(5) {
+    padding: 8rem 2rem 1rem 6rem;
+}
+
+.section#rchainSection > .wrapper:nth-child(6) {
+    padding: 8rem 6rem 1rem 2rem;
+}
+
+.section#rchainSection .wrapper .textWrapper h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+    text-transform: uppercase;
+}
+
+.section#rchainSection .wrapper .textWrapper p {
+    margin: 0;
+}
+
+.section#rchainSection > div:nth-last-child(1) {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.section#rchainSection > div:nth-last-child(1) a {
+    border: 1px solid #50badd;
+    border-radius: .2rem;
+    color: #50badd;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+}
+
+.section#rhoSection {
+    background: #42022e;
+    padding: 4rem 10rem 4rem;
+}
+
+.section#rhoSection > div:nth-child(1) {
+    text-align: center;
+}
+
+.section#rhoSection > div:nth-child(1) h3
+{
+    color: #ff4143;
+    font-size: 1.2rem;
+    margin: 0 0 .5rem;
+}
+.section#rhoSection > div:nth-child(1) h2 {
+    color: white;
+    font-size: 2rem;
+    margin: 0 0 3rem;
+}
+
+.section#rhoSection > .flexWrapper h1 {
+    color: #DAACD5;
+    font-family: Montserrat-Regular;
+    font-size: 2.3rem;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    width: 30%;
+}
+
+.section#rhoSection > .flexWrapper > .flexWrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 70%;
+}
+
+.section#rhoSection > .flexWrapper > .flexWrapper p {
+    background: white;
+    border-radius: .3rem;
+    margin: 0 .5rem 1rem;
+    padding: .8rem 1.5rem;
+    width: 47%;
+}
+
+.section#rhoSection > .flexWrapper:nth-child(2) {
+    margin-bottom: 2rem;
+}
+
+.section#posSection {
+    padding: 4rem 8rem;
+}
+
+.section#posSection .flexWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.section#posSection .flexWrapper .imgWrapper {
+    margin-bottom: 1.5rem;
+    order: 2;
+    width: 45%;
+}
+
+.section#posSection .flexWrapper .imgWrapper img {
+    display: block;
+    left: 6rem;
+    position: relative;
+    top: 6rem;
+    width: 13rem;
+}
+
+.section#posSection .flexWrapper .textWrapper {
+    width: 45%;
+}
+
+.section#posSection .flexWrapper .textWrapper h2 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: .7rem;
+}
+
+.section#posSection .flexWrapper .textWrapper ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.section#posSection .flexWrapper .textWrapper ul li {
+    margin-bottom: 2rem;
+}
+
+.section#posSection .flexWrapper .textWrapper ul li span:nth-child(1) {
+    background: #fcb415;
+    border-radius: 50px;
+    display: inline-block;
+    height: 15px;
+    margin-right: 20px;
+    width: 15px;
+}
+
+.section#posSection .flexWrapper .textWrapper ul li:nth-child(2) span:nth-child(2) {}
+
+
+.section#posSection .flexWrapper .textWrapper .btn-blue2 {
+    max-width: 460px;
+    width: 100%;
+}
+
+
+.section#communitySection {
+    background: #fafafa;
+    padding: 2rem 4rem;
+}
+
+.section#communitySection > div:nth-child(1) {
+    margin: 0 auto 3rem;
+    text-align: center;
+    width: 80%;
+}
+
+.section#communitySection > div:nth-child(1) h6 {
+    color: red;
+    font-size: .8rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.section#communitySection > div:nth-child(1) h2 {
+    font-size: 2rem;
+    margin: .5rem 0 .5rem;
+}
+
+.section#communitySection > div:nth-child(1) p {}
+
+.section#communitySection > .flexWrapper:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.section#communitySection > .flexWrapper:nth-child(2) div {
+    width: 3rem;
+}
+
+.section#articleSection {
+    padding: 4rem;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(2) {
+    width: 28%;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) {
+    width: 69%;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) .flexWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) .flexWrapper:nth-child(1) div {
+    width: 32.5%;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) .flexWrapper:nth-child(1) div p {
+    font-family: Montserrat-Bold;
+    font-size: .8rem;
+    margin: 0;
+}
+
+
+.section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) img {
+    margin-bottom: .3rem;
+}
+
+.section#articleSection > .flexWrapper:nth-child(1) .flexWrapper a {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    color: #fcb415;
+    font-family: Montserrat-Medium;
+    font-size: 1.15rem;
+    margin-top: 4rem;
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 1200px) {
+    .section#rchainSection > .wrapper:nth-child(5) {
+        padding: 8rem 2rem 1rem 0;
+    }
+    .section#rchainSection > .wrapper:nth-child(6) {
+        padding: 8rem 0 1rem 2rem;
+    }
+    .section#rchainSection > p {
+        width: 90%;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        padding-top: 8vw;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        padding-top: 3vw;
+    }
+    .section#rchainSection .flexWrapper .textWrapper h2 {
+        font-size: 2rem;
+    }
+    .section#rhoSection {
+        padding: 4rem;
+    }
+    .section#rhoSection > .flexWrapper h1 {
+        font-size: 2.1rem;
+    }
+    .section#posSection .flexWrapper .imgWrapper {
+        width: 47%;
+    }
+    .section#posSection .flexWrapper .textWrapper {
+        width: 47%;
+    }
+    .section#posSection .flexWrapper .textWrapper h2 {
+        margin: 0;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .section#rchainSection {
+    }
+    .section#rchainSection > h1 {
+        font-size: 1.6rem;
+    }
+    .section#rchainSection > h1 {
+        margin: 0 auto .2rem;
+    }
+    .section#rchainSection > h3 {
+        font-size: 1.2rem;
+    }
+    .section#rchainSection > p {
+        font-size: 1rem;
+    }
+    p, li {
+        font-size: .9rem;
+    }
+    .section#rchainSection > .wrapper:nth-child(5) {
+        padding: 5rem 1rem 1rem 0;
+    }
+    .section#rchainSection > .wrapper:nth-child(6) {
+        padding: 5rem 0 1rem 1rem;
+    }
+    .section#rchainSection .wrapper .textWrapper h2 {
+        font-size: 1.2rem;
+        margin: .7rem 0 .2rem;
+    }
+    .section#rchainSection > div:nth-last-child(1) {
+        font-size: 1.2rem;
+    }
+    .section#rhoSection {
+        padding: 4rem 2rem;
+    }
+    .section#rhoSection > .flexWrapper h1 {
+        font-size: 1.7rem;
+    }
+    .section#rhoSection > .flexWrapper > .flexWrapper p {
+        width: 46%;
+    }
+    .section#posSection {
+        padding: 4rem;
+    }
+    .section#posSection .flexWrapper .textWrapper h2 {
+        font-size: 1.6rem;
+    }
+    .section#posSection .flexWrapper .textWrapper ul li {
+        margin-bottom: 1.2rem;
+    }
+    .section#posSection .flexWrapper .imgWrapper img {
+        left: auto;
+        margin: auto;
+        top: 3rem;
+    }
+    .section#communitySection > div:nth-child(1) h6 {
+        font-size: .7rem;
+    }
+    .section#communitySection > div:nth-child(1) h2 {
+        font-size: 1.4rem;
+    }
+    .section#communitySection > .flexWrapper:nth-child(2) {
+        padding: 0 2rem;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2 {
+        font-size: 1.2rem;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper a {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 767px) {
+    p,
+    li {
+        font-size: .9rem;
+    }
+    .section#rchainSection {
+        padding: 2rem .7rem;
+    }
+    .section#rchainSection > .wrapper {
+        width: 100%;
+    }
+    .section#rchainSection > .wrapper:nth-child(5), .section#rchainSection > .wrapper:nth-child(6) {
+        padding: 1rem 0 2rem;
+    }
+    .section#rchainSection > .wrapper >
+    .imgWrapper {
+        margin: 0 auto 1.5rem;
+        padding: 2rem 3rem 0;
+    }
+    .section#rchainSection > .wrapper > .textWrapper {
+        margin: auto;
+        text-align: center;
+        width: 80%;
+    }
+    .section#rhoSection {
+        padding: 2rem .7rem;
+    }
+    .section#rhoSection > div:nth-child(1) h2 {
+        font-size: 1.6rem;
+    }
+    .section#rhoSection > .flexWrapper:nth-child(2) {
+        display: block;
+    }
+    .section#rhoSection > .flexWrapper:nth-child(3) {
+        display: block;
+    }
+    .section#rhoSection > .flexWrapper h1 {
+        text-align: center;
+        width: auto;
+    }
+    .section#rhoSection > .flexWrapper > .flexWrapper {
+        width: auto;
+    }
+    .section#posSection {
+        padding: 2rem .7rem;
+    }
+    .section#posSection .flexWrapper {
+        display: block;
+    }
+    .section#posSection .flexWrapper .imgWrapper {
+        order: 1;
+        width: auto;
+    }
+    .section#posSection .flexWrapper .imgWrapper img {
+        top: auto;
+        width: 8rem;
+    }
+    .section#posSection .flexWrapper .textWrapper {
+        width: auto;
+        text-align: center;
+    }
+    .section#posSection .flexWrapper .textWrapper h2 {
+        font-size: 1.2rem;
+        margin-bottom: .4rem;
+        text-align: center;
+    }
+    .section#posSection .flexWrapper .textWrapper p {
+        margin: auto;
+        width: 90%;
+    }
+    .section#posSection .flexWrapper .textWrapper ul {
+        padding: 0 4rem;
+    }
+    .section#posSection .flexWrapper .textWrapper ul li span:nth-child(1) {
+        margin-right: 10px;
+    }
+    .section#communitySection {
+        padding: 2rem .7rem;
+    }
+    .section#communitySection > div:nth-child(1) h2 {
+        font-size: 1.1rem;
+    }
+    .section#communitySection > .flexWrapper:nth-child(3) {
+        display: block;
+    }
+    .section#communitySection > .flexWrapper:nth-child(3) > .flexWrapper:nth-child(1) {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .section#communitySection > .flexWrapper:nth-child(2) {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-bottom: 0;
+    }
+    .section#communitySection > .flexWrapper:nth-child(2) > div {
+        margin: 0 .5rem .3rem;
+        width: 3rem;
+    }
+    .section#articleSection {
+        padding: 2rem .7rem;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) {
+        flex-wrap: wrap;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper:nth-child(1) div {
+        text-align: center;
+        width: auto;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) img {
+        width: 70%;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2,
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper h2 {
+        text-align: center;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(1) {
+        display: block;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) > .flexWrapper:nth-child(2) {
+        display: block;
+        width: 100%;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) > div:nth-child(2) img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    .section#articleSection > .flexWrapper:nth-child(1) .flexWrapper a {
+        display: block;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .section .textWrapper,
+    .section .imgWrapper {
+        display: block;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        width: 80%;
+    }
+    .section#rchainSection .flexWrapper .imgWrapper {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .section#communitySection > .flexWrapper:nth-child(2) {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .section#rchainSection > h1 {
+        font-size: 7.5vw;
+    }
+    .section#rchainSection > .wrapper > .imgWrapper {
+        padding: 2rem 0 0;
+    }
+    .section#rchainSection > .wrapper > .textWrapper {
+        width: auto;
+    }
+    .section#rhoSection > .flexWrapper h1 {
+        font-size: 5vw;
+    }
+    .section#rhoSection > .flexWrapper > .flexWrapper {
+        display: block;
+    }
+    .section#rhoSection > .flexWrapper > .flexWrapper p {
+        width: auto;
+    }
+    .section#posSection .flexWrapper .textWrapper ul {
+        padding: 0 0 0 1.5rem;
+    }
+    .section#communitySection > div:nth-child(1) {
+        width: 100%;
+    }
+    .section#communitySection > .flexWrapper:nth-child(3) > div:nth-child(2) img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .section#rchainSection > div:nth-last-child(1) {
+        font-size: 4.5vw;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        width: 100%;
+    }
+}

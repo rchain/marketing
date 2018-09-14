@@ -1,0 +1,365 @@
+p, li {
+    font-size: 1.25rem;    
+}
+
+.nav .item img.red {
+    display: inline;
+    visibility: visible;
+}
+
+.nav .item img.white {
+    display: inline;
+    visibility: hidden;
+}
+
+.nav .item a:not(.btn-blue) {
+    color: #4e4e4e;
+}
+
+.section#rchainSection {
+    padding: 4rem;
+}
+
+.section#rchainSection > p:nth-child(2) {
+    font-size: 1.5rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    width: 70%;
+}
+
+.section#rchainSection > .btn-blue2 {
+    display: block;
+    margin: auto;
+    max-width: 460px;
+    width: 100%;
+}
+
+.section#rchainSection > h1 {
+    font-size: 2.4rem;
+    margin: 0 auto .7rem;
+    text-align: center;
+}
+
+.section#rchainSection > h3 {
+    font-family: Dosis-ExtraLight;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.section#rchainSection > p:nth-child(4) {
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.section#rchainSection .wrapper {
+    display: inline-block;
+    padding-top: 8rem;
+    width: 49%;
+    vertical-align: top;
+}
+
+.section#rchainSection > .wrapper:nth-child(5) {
+    padding: 8rem 2rem 1rem 6rem;
+}
+
+.section#rchainSection > .wrapper:nth-child(6) {
+    padding: 8rem 6rem 1rem 2rem;
+}
+
+.section#rchainSection .wrapper .textWrapper h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+    text-transform: uppercase;
+}
+
+.section#rchainSection .wrapper .textWrapper p {
+    margin: 0;
+}
+
+.section#rchainSection > div:nth-last-child(1) {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.section#rchainSection > div:nth-last-child(1) a {
+    border: 1px solid #50badd;
+    border-radius: .2rem;
+    color: #50badd;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+}
+
+.section#quoteSection {
+    background: #42022e;
+    padding: 4rem;
+}
+
+.section#quoteSection p {
+    color: white;
+    font-family: Montserrat-LightItalic;
+    font-size: 2rem;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    width: 80vw;
+}
+
+.section#quoteSection p span {
+    color: #fcb415;
+    font-family: Montserrat-SemiBold;
+    font-size: 5rem;
+    position: absolute;
+}
+
+.section#quoteSection p > span:nth-child(1) {
+    left: -2rem;
+    top: -1rem;
+}
+
+.section#quoteSection p > span:nth-child(2) {
+    bottom: -3rem;
+    right: 0;
+}
+
+.section#quoteSection h6 {
+    color: white;
+    font-size: 1rem;
+    margin: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section#leadershipSection {
+    padding: 4rem 2rem;
+}
+
+.section#leadershipSection .flexWrapper {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.section#leadershipSection .flexWrapper .card {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 1rem 2rem;
+    padding: 1rem;
+    width: 324px;
+}
+
+.section#leadershipSection .flexWrapper .card img {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 12rem;
+}
+
+.section#leadershipSection .flexWrapper .card .textWrapper {
+    padding: 1rem;
+}
+
+.section#leadershipSection .flexWrapper .card .textWrapper h6 {
+    font-size: .8rem;
+    margin: 0 0 .5rem;
+    text-transform: uppercase;
+}
+
+.section#leadershipSection .flexWrapper .card .textWrapper h4 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.section#leadershipSection .flexWrapper > .card:nth-child(1) .textWrapper {
+    background: #a50034;
+    color: white;
+}
+
+.section#leadershipSection .flexWrapper > .card:nth-child(2) .textWrapper {
+    background: #42022e;
+    color: white;
+}
+
+.section#leadershipSection .flexWrapper > .card:nth-child(3) .textWrapper {
+    background: #50badd;
+    color: white;
+}
+
+.section#leadershipSection .flexWrapper > .card:nth-child(4) .textWrapper {
+    background: #fcb415;
+    color: white;
+}
+
+.section#leadershipSection .flexWrapper > .card:nth-child(5) .textWrapper {
+    background: #ff4143;
+    color: white;
+}
+
+.section#leadershipSection .flexWrapper > .card:nth-child(5) img {
+    margin-bottom: 2rem;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .section#rchainSection > p:nth-child(2) {
+        width: 90%;
+    }
+    .section#rchainSection > .wrapper:nth-child(5) {
+        padding: 8rem 2rem 1rem 0;
+    }
+    .section#rchainSection > .wrapper:nth-child(6) {
+        padding: 8rem 0 1rem 2rem;
+    }
+    .section#rchainSection > p:nth-child(4) {
+        width: 90%;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        padding-top: 8vw;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        padding-top: 3vw;
+    }
+    .section#rchainSection .flexWrapper .textWrapper h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .section#rchainSection {
+        padding: 4rem;
+    }
+    .section#rchainSection > p:nth-child(2) {
+        font-size: 1rem;
+    }
+    .section#rchainSection > h1 {
+        font-size: 1.6rem;
+    }
+    .section#rchainSection > h1 {
+        margin: 0 auto .2rem;
+    }
+    .section#rchainSection > h3 {
+        font-size: 1.2rem;
+    }
+    .section#rchainSection > p:nth-child(4) {
+        font-size: 1rem;
+    }
+    p, li {
+        font-size: .9rem;
+    }
+    .section#rchainSection > .wrapper:nth-child(5) {
+        padding: 5rem 1rem 1rem 0;
+    }
+    .section#rchainSection > .wrapper:nth-child(6) {
+        padding: 5rem 0 1rem 1rem;
+    }
+    .section#rchainSection .wrapper .textWrapper h2 {
+        font-size: 1.2rem;
+        margin: .7rem 0 .2rem;
+    }
+    .section#rchainSection > div:nth-last-child(1) {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    p,
+    li {
+        font-size: .9rem;
+    }
+    .section#rchainSection {
+        padding: 2rem .7rem;
+    }
+    .section#rchainSection > .wrapper {
+        width: 100%;
+    }
+    .section#rchainSection > .wrapper:nth-child(5), .section#rchainSection > .wrapper:nth-child(6) {
+        padding: 1rem 0 2rem;
+    }
+    .section#rchainSection > .wrapper >
+    .imgWrapper {
+        margin: 0 auto 1.5rem;
+        padding: 2rem 3rem 0;
+    }
+    .section#rchainSection > .wrapper > .textWrapper {
+        margin: auto;
+        text-align: center;
+        width: 80%;
+    }
+    .section#quoteSection p {
+        font-size: 3.3vw;
+        width: 80vw;
+    }
+    .section#quoteSection p span {
+        font-size: 10vw;
+    }
+    
+    .section#rchainSection > a {
+        font-size: 4vw;
+        padding: 3vw 0;
+        width: 90%;
+    }
+    .section#leadershipSection {
+        padding: 1rem;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .section .textWrapper,
+    .section .imgWrapper {
+        display: block;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        width: 80%;
+    }
+    .section#rchainSection .flexWrapper .imgWrapper {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .section#communitySection {
+        padding-bottom: 4rem;
+    }
+    .section#communitySection > .flexWrapper:nth-child(2) {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .section#rchainSection > h1 {
+        font-size: 7.5vw;
+    }
+    .section#rchainSection > .wrapper > .imgWrapper {
+        padding: 2rem 0 0;
+    }
+    .section#rchainSection > .wrapper > .textWrapper {
+        width: auto;
+    }
+    .section#quoteSection {
+        padding: 2rem;
+    }
+    .section#quoteSection p > span:nth-child(1) {
+        left: -1.5rem;
+    }
+    .section#quoteSection h6 {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .section#rchainSection > div:nth-last-child(1) {
+        font-size: 4.5vw;
+    }
+    .section#rchainSection .flexWrapper .textWrapper {
+        width: 100%;
+    }
+    .section#quoteSection p > span:nth-child(2) {
+        bottom: -2rem;
+    }
+}
