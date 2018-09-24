@@ -20,8 +20,8 @@
     "milestones": {
       "Visualize Protos": "2018-10-10",
       "Listen For Continuation": "2018-10-25",
-      "Python Implementation": "2018-11-1",
-      "NPM release": "2018-11-15",
+      "Python Implementation": "2018-11-15",
+      "NPM release": "2018-11-1",
       "Support Unforgeable Names": "2018-12-15",
       "Pypi release": "2019-01-15",
       "Third language": "2019-03-15"
@@ -47,7 +47,8 @@
     },
     "contributors": [
       "Brent Fischer",
-      "Joshy Orndorff"
+      "Joshy Orndorff",
+      "Jack Mills"
     ]
   },
   {
@@ -61,7 +62,8 @@
     },
     "contributors": [
       "Joshy Orndorff",
-      "Isaac Defrain"
+      "Isaac Defrain",
+      "inblock.io?"
     ]
   },
   {
@@ -111,24 +113,27 @@
   {
     "name": "Rholang stdlib",
     "description": "Useful re-usable contracts (like openzepplin)",
-    "budget": "pyrofex?, Solutions?",
+    "budget": "Solutions?",
     "milestones": {
     },
     "contributors": [
-      "??"
+      "Joshy Orndorff",
+      "Proof team?",
+      "Chris Willliams"
     ]
   },
   {
     "name": "Meetups and Presentations",
     "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
-    "budget": "Solutions? Marketing?",
+    "budget": "Solutions",
     "milestones": {
-      "re-evaluate": "2018-11-29",
-      "hit the road": "2019-01-15"
+      "SF Presentation": "2018-10-08",
+      "meetup in a box": "2018-12-15",
+      "hit the road": "2019-02-15"
     },
     "contributors": [
-      "inblockio?",
-      "Joshy Orndorff?"
+      "Ned Robinson",
+      "inblockio?"
     ]
   },
   {
