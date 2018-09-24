@@ -1,0 +1,19 @@
+{{#each .}}
+<div class="column shown">
+  <h2>{{name}}</h2>
+  <div class="meta">
+    <p class="description">{{description}}</p>
+    <p>budget: {{budget}}</p>
+    <ul class="contributors">
+      {{#each contributors}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  {{#each milestones}}
+  <div class="milestone" style="top: {{distanceDown this}}em;" title="{{@key}}">
+    {{@key}} -- {{niceDate this}}
+  </div>
+  {{/each}}
+</div>
+{{/each}}

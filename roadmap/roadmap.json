@@ -1,0 +1,146 @@
+[
+  {
+    "name": "RSign",
+    "description": "Client-side signing browser extension (meta-mask)",
+    "budget": "Solutions?",
+    "milestones": {
+      "firefox": "2018-10-15",
+      "export": "2018-10-31",
+      "multiple keys": "2018-11-15"
+    },
+    "contributors": [
+      "Dan Connolly",
+      "Chris Williams"
+    ]
+  },
+  {
+    "name": "RChain-API",
+    "description": "multi-language wrapper around RNode's gRPC. (web3 kinda)",
+    "budget": "Solutions",
+    "milestones": {
+      "Visualize Protos": "2018-10-10",
+      "Listen For Continuation": "2018-10-25",
+      "Python Implementation": "2018-11-1",
+      "NPM release": "2018-11-15",
+      "Support Unforgeable Names": "2018-12-15",
+      "Pypi release": "2019-01-15",
+      "Third language": "2019-03-15"
+    },
+    "contributors": [
+      "Dan Connolly",
+      "Chris Williams",
+      "Joshy Orndorff",
+      "Proof Team?",
+      "Resonate Team?",
+      "Life ID Team?"
+    ]
+  },
+  {
+    "name": "E-Learning Course",
+    "description": "16wk coursera-like RChain fundamentals course to eventually go on-chain.",
+    "budget": "marketing",
+    "milestones": {
+      "start": "2018-10-01",
+      "checkin": "2018-11-01",
+      "end": "2018-12-01",
+      "march30": "2019-04-1"
+    },
+    "contributors": [
+      "Brent Fischer",
+      "Joshy Orndorff"
+    ]
+  },
+  {
+    "name": "Casper Game",
+    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
+    "budget": "marketing",
+    "milestones": {
+      "start": "2018-11-20",
+      "MWE": "2018-11-30",
+      "end": "2018-12-31"
+    },
+    "contributors": [
+      "Joshy Orndorff",
+      "Isaac Defrain"
+    ]
+  },
+  {
+    "name": "Example Dapps",
+    "description": "Dapps ranging from hello world to bounty-system complexity written up as walkthrough examples.",
+    "budget": "marketing",
+    "milestones": {
+      "Status Dapp working": "2018-10-20",
+      "All Examples updated 0.7": "2018-11-15",
+      "ERC20-like": "2018-12-01",
+      "Chris's choosing": "2019-01-01",
+      "e-leraning certs": "2019-02-15",
+      "bounty-system": "2019-03-15"
+    },
+    "contributors": [
+      "Joshy Orndorff",
+      "Chris Williams",
+      "David Asymonye?"
+    ]
+  },
+  {
+    "name": "gRPC endpointHardening",
+    "description": "Attenuating forwarder's for RNode's gRPC interface. Will prevent DOS and other unwelcome traffic via hashcash or similar. CORE-917, CORE-919",
+    "budget": "Solutions",
+    "milestones": {
+      "start": "2018-10-10",
+      "hashcash": "2018-10-25",
+      "second example": "2018-11-15"
+    },
+    "contributors": [
+      "Inblockio?",
+      "Chris Williams?"
+    ]
+  },
+  {
+    "name": "Rholang Reference",
+    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
+    "budget": "pyrofex?",
+    "milestones": {
+      "start": "2018-10-15"
+    },
+    "contributors": [
+      "Derek Sorensen",
+      "Joshy Orndorff"
+    ]
+  },
+  {
+    "name": "Rholang stdlib",
+    "description": "Useful re-usable contracts (like openzepplin)",
+    "budget": "pyrofex?, Solutions?",
+    "milestones": {
+    },
+    "contributors": [
+      "??"
+    ]
+  },
+  {
+    "name": "Meetups and Presentations",
+    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
+    "budget": "Solutions? Marketing?",
+    "milestones": {
+      "re-evaluate": "2018-11-29",
+      "hit the road": "2019-01-15"
+    },
+    "contributors": [
+      "inblockio?",
+      "Joshy Orndorff?"
+    ]
+  },
+  {
+    "name": "Archdoc/Whitepaper revision",
+    "description": "Update (and maybe merge) the documents that describe the RChain architecture to match more recent plans.",
+    "budget": "Marketing? Pyrofex?",
+    "milestones": {
+      "start": "2018-10-15"
+    },
+    "contributors": [
+      "Joshy Orndorff",
+      "Need review/help from core devs."
+    ]
+  }
+]

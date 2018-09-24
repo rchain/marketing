@@ -1,0 +1,64 @@
+
+/*********** For the Timeline on the left *********/
+#timeline {
+  float: left;
+  width: 10em;
+  background: green;
+  margin: 15em 1ex;
+  padding-top: 15em;
+}
+
+.month {
+  padding-bottom: 15em;
+  width: 1100%;
+  border-top: .1em dashed green;
+  z-index: 1; /* Why doesn't this make the line over the green part? */
+}
+
+/********** For the columns ***********/
+
+.column {
+  height: 130em;
+  float: left;
+  margin: 1ex;
+  padding: 1em;
+  background: rgba(40, 40, 40, .5);
+  position: relative; /* So the absolute positioned children work */
+}
+
+.meta {
+  height: 200px;
+  border: 1px solid black;
+}
+
+.column.shown {
+    width: 15em;
+}
+
+.column.hidden {
+    width: 1em;
+}
+
+.hidden h2 {
+  transform: rotate(90deg);
+  white-space: no-wrap;
+}
+
+.hidden .meta {
+  display: none;
+}
+
+.shown .milestone {
+  color: black;
+}
+
+.hidden .milestone {
+  width: 20%;
+  height: 1em;
+  color: pink;
+  overflow: hidden;
+}
+
+.milestone {
+  position: absolute;
+}
