@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function relativePath(filename) {
     let path = window.location.pathname.split('/');
-    if (path[path.length] === "index.html") {
-      path = path.slice(0, path.length);
+    if (path[path.length - 1] === "index.html") {
+      path[path.length - 1] = "";
     }
     return `${window.location.protocol}//${window.location.host}${path.join("/")}${filename}`
   }
