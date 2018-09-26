@@ -42,28 +42,13 @@
     "milestones": {
       "start": "2018-10-01",
       "checkin": "2018-11-01",
-      "end": "2018-12-01",
-      "march30": "2019-04-1"
+      "end": "2019-02-01"
     },
     "contributors": [
       "Brent Fischer",
       "Joshy Orndorff",
-      "Jack Mills"
-    ]
-  },
-  {
-    "name": "Casper Game",
-    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
-    "budget": "marketing",
-    "milestones": {
-      "start": "2018-11-20",
-      "MWE": "2018-11-30",
-      "end": "2018-12-31"
-    },
-    "contributors": [
-      "Joshy Orndorff",
-      "Isaac Defrain",
-      "inblock.io?"
+      "Jack Mills",
+      "Jake Gilberg"
     ]
   },
   {
@@ -99,8 +84,22 @@
     ]
   },
   {
+    "name": "librho",
+    "description": "Re-usable standard library contracts (like openzepplin)",
+    "budget": "Solutions?",
+    "milestones": {
+      "start": "2018-09-21",
+      "bigint": "2018-10-15"
+    },
+    "contributors": [
+      "Joshy Orndorff",
+      "Proof team?",
+      "Chris Willliams"
+    ]
+  },
+  {
     "name": "Rholang Reference",
-    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
+    "description": "Formal language reference where devs can find syntax and semantics of rholang",
     "budget": "pyrofex?",
     "milestones": {
       "start": "2018-10-15"
@@ -111,20 +110,8 @@
     ]
   },
   {
-    "name": "Rholang stdlib",
-    "description": "Useful re-usable contracts (like openzepplin)",
-    "budget": "Solutions?",
-    "milestones": {
-    },
-    "contributors": [
-      "Joshy Orndorff",
-      "Proof team?",
-      "Chris Willliams"
-    ]
-  },
-  {
     "name": "Meetups and Presentations",
-    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
+    "description": "Fun and educational browser-based game. User manually participates in a casper simulation",
     "budget": "Solutions",
     "milestones": {
       "SF Presentation": "2018-10-08",
@@ -134,6 +121,21 @@
     "contributors": [
       "Ned Robinson",
       "inblockio?"
+    ]
+  },
+  {
+    "name": "Casper Game",
+    "description": "Fun and educational browser-based game. USer manually participates in a casper simulation",
+    "budget": "marketing",
+    "milestones": {
+      "start": "2018-11-20",
+      "MWE": "2018-11-30",
+      "end": "2018-12-31"
+    },
+    "contributors": [
+      "Joshy Orndorff",
+      "Isaac Defrain",
+      "inblock.io?"
     ]
   },
   {
