@@ -76,6 +76,18 @@ router.get('/leadership', function (req, res) {
     });
 });
 
+router.get('/rnode-install', function (req, res) {
+    res.render('rnode-install', {
+        title: 'Install RNode',
+        style: 'rnode-install',
+        ogtitle: 'Install RNode',
+        ogdescription: "",
+        ogurl: 'https://rchain.coop/rnode-install',
+        ogimg: '',
+        scripts: '/js/rnode-install_Browser.js'
+    });
+});
+
 router.get('/events', function (req, res) {
     res.redirect('https://developer.rchain.coop/conference');
 });

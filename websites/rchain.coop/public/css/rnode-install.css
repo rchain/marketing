@@ -1,0 +1,342 @@
+p, li {
+    font-size: 1.2rem;
+}
+
+.nav .item img.white {
+    display: none;
+}
+
+.nav .item img.red {
+    display: inline;
+    visibility: visible;
+}
+
+.section#headerSection .textWrapper {
+    text-align: center;
+}
+
+.section#headerSection .textWrapper > h1 {
+    color: black;
+    font-size: 1.9rem;
+    margin: 0 0 4rem;
+}
+
+.section#headerSection .textWrapper > p {
+    margin-bottom: .5rem;
+    max-width: 30rem;
+}
+
+.section#headerSection h1,
+.section#headerSection h6 {
+    color: #484848;
+}
+
+.section#headerSection .imgWrapper {
+    padding: 3rem 1rem 1rem;
+    width: 35%;
+}
+
+.section#headerSection .imgWrapper img {
+    width: 70%;
+}
+
+.section#installSection {
+    padding: 10rem 0 2rem;
+}
+
+.section#installSection #tab {
+    background: white;
+    border-bottom: 1px solid #999999; 
+    text-align: center;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: flex;
+    -ms-flex-pack: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 70%;
+}
+
+.section#installSection #tab .item {
+    font-size: 1.1rem;
+    font-family: Montserrat-Bold;
+    font-weight: 900;
+    text-align: left;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: block;
+    text-transform: uppercase;
+}
+
+.section#installSection #tab > .item img {
+    display: block;
+    width: 3rem;
+} 
+
+.section#installSection #tab .item:nth-child(1) {
+    margin: 1rem 0 0 0 !important;
+}
+
+.section#installSection #tab .item:nth-child(1).active {
+    margin: 1rem 0 -1px 0 !important;
+}
+
+.section#installSection #tab .item {
+    margin: 1rem 0 0;
+    width: 100%;
+}
+
+.section#installSection #tab .item a {
+    border-bottom: 2px solid white;
+    display: block;
+    text-decoration: none;
+    color: #484848;
+    padding: .7rem 0 1rem 0;
+    text-align: left;
+    width: 60%;
+}
+
+.section#installSection #tab .item.active {
+    margin: 1rem 0 -1px;
+}
+
+.section#installSection #tab .item.active > a {
+    border-bottom: 3px solid #ff4143;
+    color: #ff4143;
+    text-align: left;
+    width: 60%;
+}
+
+.section#installSection .tabContent.active {
+    display: block;
+    margin: auto;
+}
+
+.section#installSection .tabContent {
+    display: none;
+    width: 70%;
+}
+
+.section#installSection .tabContent > .textWrapper {
+    margin-bottom: 1rem;
+}
+
+.code {
+    background: #D3D3D3;
+    padding: .2rem .5rem .4rem;
+}
+
+.code > p {
+    margin: 0;
+}
+
+.section#installSection .tabContent > .textWrapper h2 {
+    color: #484848;
+    font-family: Montserrat-SemiBold;
+    font-size: 2.2rem;
+    margin-bottom: .2rem;
+}
+
+.section#installSection .tabContent > .textWrapper p {
+    margin: auto;
+    word-spacing: 10px;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper {
+    text-align: left;
+    width: 55%;
+}
+
+.section#installSection .tabContent > .flexWrapper .imgWrapper {
+    width: 40%;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper h6 {
+    color: black;
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper .list > div {
+    margin-bottom: 1.5rem;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper a {
+    font-family: Dosis-Light;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper .list div p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper .list div p:nth-child(1) {
+    background: #42022e;
+    border-radius: 50%;
+    color: white;
+    font-family: Montserrat-Bold;
+    font-size: 1rem;
+    margin-right: .5rem;
+    padding: 3px 0;
+    text-align: center;
+    width: 27px;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper .list div p:nth-child(2) {
+    line-height: 1;
+    width: 80%;
+}
+
+.section#installSection .tabContent > .flexWrapper .textWrapper .list div p:nth-child(2) a {
+    color: #a50034;
+    font-family: Dosis-Medium;
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px)  {
+    .section#installSection {
+        padding: 10rem 0 2rem;
+    }
+    .section#installSection #tab {
+        width: 80%;
+    }
+    .section#installSection .tabContent {
+        width: 80%;
+    }
+    .section#installSection #tab .item:nth-child(1) {
+        margin: 1rem 0 0 0 !important;
+    }
+    .section#installSection #tab .item:nth-child(1).active {
+        margin: 1rem 0 -1px 0 !important;
+    }
+}
+
+
+@media (max-width: 960px) {
+    .section#headerSection .textWrapper > h1 {
+        margin: 0 0 2rem;
+    }
+    .section#installSection {
+        padding: 10rem 0 4rem;
+    }
+    .section#installSection .tabContent > .textWrapper p {
+        width: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .section#headerSection  {
+        padding: 2rem 0 1rem;
+    }
+    .section#headerSection .textWrapper {
+        width: auto;
+    }
+    .section#headerSection .textWrapper > h1 {
+        margin: 0 0 0;
+    }
+    .section#headerSection .textWrapper > h1, .section#headerSection .textWrapper > p {
+        max-width: none;
+    }
+    .section#headerSection .imgWrapper {
+        display: none;
+    }
+    .section#installSection {
+        padding: 8rem .7rem 4rem;
+    }
+    .section#installSection #tab {
+        width: 95%;
+    }
+    .section#installSection #tab .item.active > a {
+        width: auto;
+    }
+    .section#installSection .tabContent {
+        height: 650px;
+        width: 95%;
+    }
+    .section#installSection .flexWrapper {
+        display: block;
+    }
+    .section#installSection #tab .item {
+        flex: 1;
+    }
+    .section#installSection #tab .item:nth-child(1).active {
+        margin: 1rem 0 -1px 0 !important;
+    }
+    .section#installSection #tab .item:nth-child(1) {
+        margin: 1rem 10vw 0 0 !important;
+    }
+    .section#installSection #tab .item.active {
+        margin: 1rem 0 -1px;
+    }
+    .section#installSection #tab .item {
+        margin: 1rem 0 0;
+    }
+    .section#installSection .tabContent > .textWrapper h2 {
+        font-size: 1.5rem;
+    }
+    .section#installSection .tabContent > .textWrapper p, .section#installSection .tabContent .textWrapper .list p {
+        font-size: .9rem;
+        margin: .5rem 0;
+    }
+    .section#installSection .tabContent > .textWrapper {
+        margin-bottom: 2.5rem;
+    }
+    .section#installSection .tabContent > .flexWrapper .textWrapper {
+        margin-bottom: 1.5rem;
+        width: auto;
+    }
+    .section#installSection .tabContent > .flexWrapper .imgWrapper {
+        padding: 0 8rem;
+        width: auto;
+    }
+    .section#installSection .tabContent > .flexWrapper .textWrapper .list div p:nth-child(1) {
+        font-size: .8rem;
+        margin-right: .2rem;
+        width: 24px;
+    }
+    .section#installSection .tabContent > .flexWrapper .textWrapper .list div p:nth-child(2) {
+        vertical-align: middle;
+    }
+    .section#installSection .tabContent > .flexWrapper .textWrapper .list > div {
+        margin-bottom: .5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .section#headerSection .textWrapper > h1 {
+        font-size: 7.5vw;
+    }
+    .section#installSection #tab .item {
+        font-size: 4vw;
+    }
+    .section#installSection .tabContent {
+        height: 600px;
+    }
+    .section#installSection .tabContent > .textWrapper h2 {
+        font-size: 6vw;
+    }
+    .section#installSection .tabContent > .flexWrapper .imgWrapper {
+        padding: 0 4rem;
+    }
+}
+
+
+
+
+

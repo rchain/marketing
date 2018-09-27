@@ -23,7 +23,7 @@ function saveSubmission  (req) {
         user: 'admin',
         host: '127.0.0.1',
         database: 'postgres',
-        password: '!32admin55',
+        password: 'XXXXXXX',
         port: '5432'
     });
     

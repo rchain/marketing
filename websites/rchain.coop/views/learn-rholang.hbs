@@ -42,7 +42,8 @@
             <h3 id="exercise">Exercise</h3>
             <p>Try to change &quot;stdout&quot; to something else. Any results?.</p>
             <ul>
-                <li>Try this funny channel name <pre><code>@&quot;someChannel&quot;</code></pre>.</li>
+                <li>Try this funny channel name
+                    <pre><code>@&quot;someChannel&quot;</code></pre>.</li>
                 <li>We&#39;re casual here. Make the program say &quot;Sup World&quot; on the screen.</li>
             </ul>
             <h2 id="wth-is-stdout-">WTH is stdout?</h2>
@@ -129,7 +130,13 @@
             <h2 id="comm-events">Comm Events</h2>
             <p class="imgWrapper"><img src="/assets/pizza.png" alt="Pizza shop can receive messages on its channel."></p>
             <p>The following code sends a message on a channel for a pizza shop and the pizza shop receives it. The pizza shop acknowledges receiving the message by printing to stdout.</p>
-            <p><a href="pizzaOrder.rho">pizzaOrder</a></p>
+            <pre class="inline-code">new stdout(`rho:io:stdout`) in {
+  @"pizzaShop"!("2 medium pies")
+  |
+  for(order 	&lt;- @"pizzaShop"){
+    stdout!("Order Received.")
+  }
+}</pre>
             <h3 id="exercise">Exercise</h3>
             <p>Send that message to a different channel like <code>@&quot;coffeShop&quot;</code>. Did the acknowledgement print? Is anything left in the tuplespace?</p>
             <p class="imgWrapper"><img src="/assets/coffee.png" alt="Let&#39;s hit up the coffee shop."></p>
@@ -176,11 +183,11 @@
             <p>Change the acknowledgement message</p>
             <p>Which should generally come first?</p>
             <ul class="quiz">
-                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> A send because that&#39;s how normal mail works.</li>
-                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> A receive because it&#39;s faster to run the code that way.</li>
-                <li><input  value="correct" type="radio" name="quiz4" class="quiz"> Either a send or a receive can come first, or they can come together.</li>
-                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> A receive because rholang is concurrent.</li>
-                <li><input  value="incorrect" type="radio" name="quiz4" class="quiz"> Neither. Just make a comm event directly.</li>
+                <li><input value="incorrect" type="radio" name="quiz4" class="quiz"> A send because that&#39;s how normal mail works.</li>
+                <li><input value="incorrect" type="radio" name="quiz4" class="quiz"> A receive because it&#39;s faster to run the code that way.</li>
+                <li><input value="correct" type="radio" name="quiz4" class="quiz"> Either a send or a receive can come first, or they can come together.</li>
+                <li><input value="incorrect" type="radio" name="quiz4" class="quiz"> A receive because rholang is concurrent.</li>
+                <li><input value="incorrect" type="radio" name="quiz4" class="quiz"> Neither. Just make a comm event directly.</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz4Correct">Correct!</p>
@@ -201,7 +208,7 @@
 
             <p>Which of these things is not like the other?</p>
             <ul class="quiz">
-                <li><input  value="correct" type="radio" name="quiz5" class="quiz"> <code>for (a &lt;- b){}</code></li>
+                <li><input value="correct" type="radio" name="quiz5" class="quiz"> <code>for (a &lt;- b){}</code></li>
                 <li><input value="incorrect" type="radio" name="quiz5" class="quiz"> <code>contract b(a) = {}</code></li>
                 <li><input value="incorrect" type="radio" name="quiz5" class="quiz"> <code>for (a &lt;= b){}</code></li>
             </ul>
@@ -212,7 +219,7 @@
             <p>Which send will produce a comm event with <code>for (message &lt;- @&quot;grandmasSnapChat&quot;){0}</code>?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz6" class="quiz"> <code>grandmasSnapChat!(&quot;Hi Grandma&quot;)</code></li>
-                <li><input value="correct"  type="radio" name="quiz6" class="quiz"> <code>@&quot;grandmasSnapChat&quot;!(&quot;Glad you&#39;re snapping Grandma&quot;)</code></li>
+                <li><input value="correct" type="radio" name="quiz6" class="quiz"> <code>@&quot;grandmasSnapChat&quot;!(&quot;Glad you&#39;re snapping Grandma&quot;)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz6" class="quiz"> <code>for(&quot;Here&#39;s a snap for you g&#39;ma&quot; &lt;- @&quot;grandmasSnapChat&quot;)</code></li>
             </ul>
             <div class="quizResponse">
@@ -282,8 +289,8 @@
             <h2 id="quiz">Quiz</h2>
             <p>What do we send?</p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz7" class="quiz"> processes</li>
-                <li><input value="incorrect"  type="radio" name="quiz7" class="quiz"> names</li>
+                <li><input value="correct" type="radio" name="quiz7" class="quiz"> processes</li>
+                <li><input value="incorrect" type="radio" name="quiz7" class="quiz"> names</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz7Correct">Correct!</p>
@@ -292,7 +299,7 @@
             <p>What do we receive?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz8" class="quiz"> processes</li>
-                <li><input value="correct"  type="radio" name="quiz8" class="quiz"> names</li>
+                <li><input value="correct" type="radio" name="quiz8" class="quiz"> names</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz8Correct">Correct!</p>
@@ -301,7 +308,7 @@
             <p> What is <code>@&quot;registration&quot;</code></p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz9" class="quiz"> process</li>
-                <li><input value="correct"  type="radio" name="quiz9" class="quiz"> name</li>
+                <li><input value="correct" type="radio" name="quiz9" class="quiz"> name</li>
                 <li><input value="incorrect" type="radio" name="quiz9" class="quiz"> invalid syntax</li>
             </ul>
             <div class="quizResponse">
@@ -310,7 +317,7 @@
             </div>
             <p>What is <code>0</code>?</p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz10" class="quiz"> process</li>
+                <li><input value="correct" type="radio" name="quiz10" class="quiz"> process</li>
                 <li><input value="incorrect" type="radio" name="quiz10" class="quiz"> name</li>
                 <li><input value="incorrect" type="radio" name="quiz10" class="quiz"> invalid syntax</li>
             </ul>
@@ -321,7 +328,7 @@
             <p>What is <code>@0</code>?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz11" class="quiz"> process</li>
-                <li><input value="correct"  type="radio" name="quiz11" class="quiz"> name</li>
+                <li><input value="correct" type="radio" name="quiz11" class="quiz"> name</li>
                 <li><input value="incorrect" type="radio" name="quiz11" class="quiz"> invalid syntax</li>
             </ul>
             <div class="quizResponse">
@@ -332,7 +339,7 @@
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz12" class="quiz"> process</li>
                 <li><input value="incorrect" type="radio" name="quiz12" class="quiz"> name</li>
-                <li><input value="correct"  type="radio" name="quiz12" class="quiz"> invalid syntax</li>
+                <li><input value="correct" type="radio" name="quiz12" class="quiz"> invalid syntax</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz12Correct">Correct!</p>
@@ -341,7 +348,7 @@
             <p><code>*importantData</code> is a process, so what is <code>importantData</code>?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz13" class="quiz"> process</li>
-                <li><input value="correct"  type="radio" name="quiz13" class="quiz"> name</li>
+                <li><input value="correct" type="radio" name="quiz13" class="quiz"> name</li>
                 <li><input value="incorrect" type="radio" name="quiz13" class="quiz"> invalid syntax</li>
             </ul>
             <div class="quizResponse">
@@ -350,11 +357,11 @@
             </div>
             <p> Which of these is equivalent to <code>&quot;BobsPhone&quot;</code>?</p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz14" class="quiz"> <code>*@&quot;BobsPhone&quot;</code></li>
-                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>@&quot;BobsPhone&quot;</code></li>
-                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>*&quot;BobsPhone&quot;</code></li>
-                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>@*BobsPhone</code></li>
-                <li><input value="incorrect" type="radio"  name="quiz14" class="quiz"> <code>stdout!(&quot;BobsPhone&quot;)</code></li>
+                <li><input value="correct" type="radio" name="quiz14" class="quiz"> <code>*@&quot;BobsPhone&quot;</code></li>
+                <li><input value="incorrect" type="radio" name="quiz14" class="quiz"> <code>@&quot;BobsPhone&quot;</code></li>
+                <li><input value="incorrect" type="radio" name="quiz14" class="quiz"> <code>*&quot;BobsPhone&quot;</code></li>
+                <li><input value="incorrect" type="radio" name="quiz14" class="quiz"> <code>@*BobsPhone</code></li>
+                <li><input value="incorrect" type="radio" name="quiz14" class="quiz"> <code>stdout!(&quot;BobsPhone&quot;)</code></li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz14Correct">Correct!</p>
@@ -392,7 +399,7 @@ for (info &lt;- @"airportInfo") {
             <p>By the way, did you notice that we don&#39;t need <code>new stdout(...) in {}</code> when we don&#39;t actually use <code>stdout</code>.</p>
             <p>How many comms happen in <code>for (x &lt;- y) {0} | y!!(0)</code></p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz15" class="quiz"> <code>1</code></li>
+                <li><input value="correct" type="radio" name="quiz15" class="quiz"> <code>1</code></li>
                 <li><input value="incorrect" type="radio" name="quiz15" class="quiz"> <code>many</code></li>
                 <li><input value="incorrect" type="radio" name="quiz15" class="quiz"> <code>0</code></li>
             </ul>
@@ -421,7 +428,7 @@ for (info &lt;- @"airportInfo") {
             <p>How many comms happen in <code>for (x &lt;= y) {0} | y!!(0)</code></p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz16" class="quiz"> <code>1</code></li>
-                <li><input value="correct"  type="radio" name="quiz16" class="quiz"> <code>many</code></li>
+                <li><input value="correct" type="radio" name="quiz16" class="quiz"> <code>many</code></li>
                 <li><input value="incorrect" type="radio" name="quiz16" class="quiz"> <code>0</code></li>
             </ul>
             <div class="quizResponse">
@@ -474,9 +481,9 @@ for (msg &lt;- &commat;"grandma"){
             <p>If you&#39;ve ever written spreadsheet macros, or even used a spreadsheet. Accessing data without consuming it should be familiar. Think of it as</p>
             <p>Which syntax is used to peek at a message?</p>
             <ul class="quiz">
-                <li><input value="correct"   type="radio" name="quiz17" class="quiz"> <code>for (x &lt;! y){...}</code></li>
-                <li><input value="incorrect"  type="radio" name="quiz17" class="quiz"> <code>for (x &lt;= y){...}</code></li>
-                <li><input value="incorrect"  type="radio" name="quiz17" class="quiz"> <code>x!!(y)</code></li>
+                <li><input value="correct" type="radio" name="quiz17" class="quiz"> <code>for (x &lt;! y){...}</code></li>
+                <li><input value="incorrect" type="radio" name="quiz17" class="quiz"> <code>for (x &lt;= y){...}</code></li>
+                <li><input value="incorrect" type="radio" name="quiz17" class="quiz"> <code>x!!(y)</code></li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz17Correct">Correct!</p>
@@ -484,7 +491,7 @@ for (msg &lt;- &commat;"grandma"){
             </div>
             <p>How many comms happen in <code>for (x &lt;! y) {0} | y!!(0)</code></p>
             <ul class="quiz">
-                <li><input value="correct"   type="radio" name="quiz18" class="quiz"> <code>1</code></li>
+                <li><input value="correct" type="radio" name="quiz18" class="quiz"> <code>1</code></li>
                 <li><input value="incorrect" type="radio" name="quiz18" class="quiz"> <code>many</code></li>
                 <li><input value="incorrect" type="radio" name="quiz18" class="quiz"> <code>0</code></li>
             </ul>
@@ -544,7 +551,7 @@ for (msg &lt;- &commat;"grandma"){
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz19" class="quiz"> <code>@&quot;AliceCancel&quot;!(&quot;cancelZ&quot;)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz19" class="quiz"> <code>@&quot;AliceLaunch&quot;!(&quot;cancel&quot;)</code></li>
-                <li><input value="correct"  type="radio" name="quiz19" class="quiz"> <code>for (x &lt;- @&quot;AliceLaunch&quot;){0}</code></li>
+                <li><input value="correct" type="radio" name="quiz19" class="quiz"> <code>for (x &lt;- @&quot;AliceLaunch&quot;){0}</code></li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz19Correct">Correct!</p>
@@ -555,10 +562,10 @@ for (msg &lt;- &commat;"grandma"){
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz20" class="quiz"> y</li>
                 <li><input value="incorrect" type="radio" name="quiz20" class="quiz"> b</li>
-                <li><input value="correct"  type="radio" name="quiz20" class="quiz"> doesn&#39;t matter</li>
+                <li><input value="correct" type="radio" name="quiz20" class="quiz"> doesn&#39;t matter</li>
                 <li><input value="incorrect" type="radio" name="quiz20" class="quiz"> they must be sent simultaneously</li>
             </ul>
-             <div class="quizResponse">
+            <div class="quizResponse">
                 <p class="correct" id="quiz20Correct">Correct!</p>
                 <p class="incorrect" id="quiz20incorrect">Incorrect. Please try again.</p>
             </div>
@@ -567,7 +574,7 @@ for (msg &lt;- &commat;"grandma"){
                 <li><input value="incorrect" type="radio" name="quiz21" class="quiz"> x</li>
                 <li><input value="incorrect" type="radio" name="quiz21" class="quiz"> a</li>
                 <li><input value="incorrect" type="radio" name="quiz21" class="quiz"> doesn&#39;t matter</li>
-                <li><input value="correct"  type="radio" name="quiz21" class="quiz"> they will be consumed simultaneously</li>
+                <li><input value="correct" type="radio" name="quiz21" class="quiz"> they will be consumed simultaneously</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz21Correct">Correct!</p>
@@ -616,7 +623,7 @@ for (msg &lt;- &commat;"grandma"){
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz22" class="quiz"> Because both players could send messages at the same time</li>
                 <li><input value="incorrect" type="radio" name="quiz22" class="quiz"> The players are sending on the wrong channels</li>
-                <li><input value="correct"  type="radio" name="quiz22" class="quiz"> The first block receives P2 while the second receives P1, so neither ever finishes</li>
+                <li><input value="correct" type="radio" name="quiz22" class="quiz"> The first block receives P2 while the second receives P1, so neither ever finishes</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz22Correct">Correct!</p>
@@ -634,7 +641,7 @@ for (msg &lt;- &commat;"grandma"){
                 <li><input value="incorrect" type="radio" name="quiz23" class="quiz">contract evilPizzaShop(interceptedMessage) = {0}</li>
                 <li><input value="incorrect" type="radio" name="quiz23" class="quiz"> <code>@&quot;evilPizzaShop&quot;!(&quot;pizzaShop&quot;)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz23" class="quiz"> <code>@&quot;pizzaShop&quot;!(&quot;intercept&quot;)</code></li>
-                <li><input value="correct"  type="radio"name="quiz23" class="quiz"> <code>for (interceptedMessage &amp;lt;- @&quot;pizzaShop&quot;){...}</code></li>
+                <li><input value="correct" type="radio" name="quiz23" class="quiz"> <code>for (interceptedMessage &amp;lt;- @&quot;pizzaShop&quot;){...}</code></li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz23Correct">Correct!</p>
@@ -655,7 +662,7 @@ for (msg &lt;- &commat;"grandma"){
             <p>State whether <code>x</code> is bound or free in each of the following code snippets.</p>
             <p><code>for (x &amp;lt;- y){0}</code></p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz24" class="quiz"> Bound</li>
+                <li><input value="correct" type="radio" name="quiz24" class="quiz"> Bound</li>
                 <li><input value="incorrect" type="radio" name="quiz24" class="quiz"> Free</li>
                 <li><input value="incorrect" type="radio" name="quiz24" class="quiz"> Neither</li>
             </ul>
@@ -666,7 +673,7 @@ for (msg &lt;- &commat;"grandma"){
             <p><code>for (y &amp;lt;- x){0}</code></p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz25" class="quiz"> Bound</li>
-                <li><input value="correct"  type="radio" name="quiz25" class="quiz"> Free</li>
+                <li><input value="correct" type="radio" name="quiz25" class="quiz"> Free</li>
                 <li><input value="incorrect" type="radio" name="quiz25" class="quiz"> Neither</li>
             </ul>
             <div class="quizResponse">
@@ -675,7 +682,7 @@ for (msg &lt;- &commat;"grandma"){
             </div>
             <p><code>new x in { x!(true) }</code></p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz26" class="quiz"> Bound</li>
+                <li><input value="correct" type="radio" name="quiz26" class="quiz"> Bound</li>
                 <li><input value="incorrect" type="radio" name="quiz26" class="quiz"> Free</li>
                 <li><input value="incorrect" type="radio" name="quiz26" class="quiz"> Neither</li>
             </ul>
@@ -686,7 +693,7 @@ for (msg &lt;- &commat;"grandma"){
             <p><code>contract x(y) = { 0 }</code></p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz27" class="quiz"> Bound</li>
-                <li><input value="correct"  type="radio" name="quiz27" class="quiz"> Free</li>
+                <li><input value="correct" type="radio" name="quiz27" class="quiz"> Free</li>
                 <li><input value="incorrect" type="radio" name="quiz27" class="quiz"> Neither</li>
             </ul>
             <div class="quizResponse">
@@ -695,9 +702,9 @@ for (msg &lt;- &commat;"grandma"){
             </div>
             <p><code>contract y(x) = { 0 }</code></p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz28" class="quiz"> Bound</li>
-                <li><input value="incorrect" type="radio"  name="quiz28" class="quiz"> Free</li>
-                <li><input value="incorrect" type="radio"  name="quiz28" class="quiz"> Neither</li>
+                <li><input value="correct" type="radio" name="quiz28" class="quiz"> Bound</li>
+                <li><input value="incorrect" type="radio" name="quiz28" class="quiz"> Free</li>
+                <li><input value="incorrect" type="radio" name="quiz28" class="quiz"> Neither</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz28Correct">Correct!</p>
@@ -705,9 +712,9 @@ for (msg &lt;- &commat;"grandma"){
             </div>
             <p><code>for (y &amp;lt;- @&quot;x&quot;){0}</code></p>
             <ul class="quiz">
-                <li><input value="incorrect" type="radio"  name="quiz29" class="quiz"> Bound</li>
+                <li><input value="incorrect" type="radio" name="quiz29" class="quiz"> Bound</li>
                 <li><input value="incorrect" type="radio" name="quiz29" class="quiz"> Free</li>
-                <li><input value="correct"  type="radio" name="quiz29" class="quiz"> Neither</li>
+                <li><input value="correct" type="radio" name="quiz29" class="quiz"> Neither</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz29Correct">Correct!</p>
@@ -736,7 +743,7 @@ for (msg &lt;- &commat;"grandma"){
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz30" class="quiz"> The order works fine</li>
                 <li><input value="incorrect" type="radio" name="quiz30" class="quiz"> The order works but takes much longer</li>
-                <li><input value="correct"  type="radio" name="quiz30" class="quiz"> Error about top-level free variables</li>
+                <li><input value="correct" type="radio" name="quiz30" class="quiz"> Error about top-level free variables</li>
                 <li><input value="incorrect" type="radio" name="quiz30" class="quiz"> The code runs, but no order is received</li>
             </ul>
             <div class="quizResponse">
@@ -747,7 +754,7 @@ for (msg &lt;- &commat;"grandma"){
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz31" class="quiz"> It quotes &quot;pizzaShop&quot;</li>
                 <li><input value="incorrect" type="radio" name="quiz31" class="quiz"> It doesn&#39;t quote anything</li>
-                <li><input value="correct"  type="radio" name="quiz31" class="quiz"> &quot;Some Unforgeable hex code&quot;</li>
+                <li><input value="correct" type="radio" name="quiz31" class="quiz"> &quot;Some Unforgeable hex code&quot;</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz31Correct">Correct!</p>
@@ -760,7 +767,7 @@ for (msg &lt;- &commat;"grandma"){
             <p>We&#39;ve previously used <code>new</code> to prevent tuplespace pollution. Why did using unforgeable names prevent us from having to clear the tuplespace after each contract run?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz32" class="quiz"> Because <code>new</code> makes free names</li>
-                <li><input value="correct"  type="radio" name="quiz32" class="quiz"> Because <code>new</code> creates unforgeable names that can&#39;t be accessed by outside code</li>
+                <li><input value="correct" type="radio" name="quiz32" class="quiz"> Because <code>new</code> creates unforgeable names that can&#39;t be accessed by outside code</li>
                 <li><input value="incorrect" type="radio" name="quiz32" class="quiz"> Because <code>new</code> automatically clears the tuplespace</li>
             </ul>
             <div class="quizResponse">
@@ -789,7 +796,7 @@ for (msg &lt;- &commat;"grandma"){
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz33" class="quiz"> There is a bug in the code</li>
                 <li><input value="incorrect" type="radio" name="quiz33" class="quiz"> The orders were not received correctly</li>
-                <li><input value="correct"  type="radio" name="quiz33" class="quiz"> The confirmation was not sent to <code>stdout</code></li>
+                <li><input value="correct" type="radio" name="quiz33" class="quiz"> The confirmation was not sent to <code>stdout</code></li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz33Correct">Correct!</p>
@@ -816,7 +823,7 @@ for (msg &lt;- &commat;"grandma"){
             <p>In this example we trust the shop to only <em>send</em> on the ack channel, but notice that it could also receive if it wanted to. We&#39;ll learn how to give out only some of those permissions in the next lesson on bundles.</p>
             <p>Bob also wants to order a pizza and give a unforgeable ack channel. Where should he create his unforgeable channel?</p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz34" class="quiz"> On his own line, after the alice code</li>
+                <li><input value="correct" type="radio" name="quiz34" class="quiz"> On his own line, after the alice code</li>
                 <li><input value="incorrect" type="radio" name="quiz34" class="quiz"> On the same line the Alice did</li>
                 <li><input value="incorrect" type="radio" name="quiz34" class="quiz"> On the very first l ine of the program</li>
             </ul>
@@ -851,7 +858,7 @@ for (msg &amp;lt;- myChan) {stdout!(*msg)}</code></p>
             <h2 id="quiz">Quiz</h2>
             <p>Which name is bound in <code>for(x &amp;lt;- y){0}</code></p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz35" class="quiz"> <code>x</code></li>
+                <li><input value="correct" type="radio" name="quiz35" class="quiz"> <code>x</code></li>
                 <li><input value="incorrect" type="radio" name="quiz35" class="quiz"> <code>y</code></li>
                 <li><input value="incorrect" type="radio" name="quiz35" class="quiz"> <code>0</code></li>
             </ul>
@@ -861,7 +868,7 @@ for (msg &amp;lt;- myChan) {stdout!(*msg)}</code></p>
             </div>
             <p>Which name is bound in <code>new x in {0}</code></p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz36" class="quiz"> <code>x</code></li>
+                <li><input value="correct" type="radio" name="quiz36" class="quiz"> <code>x</code></li>
                 <li><input value="incorrect" type="radio" name="quiz36" class="quiz"> <code>y</code></li>
                 <li><input value="incorrect" type="radio" name="quiz36" class="quiz"> <code>0</code></li>
             </ul>
@@ -873,7 +880,7 @@ for (msg &amp;lt;- myChan) {stdout!(*msg)}</code></p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz37" class="quiz"> A name</li>
                 <li><input value="incorrect" type="radio" name="quiz37" class="quiz"> A process</li>
-                <li><input value="correct"  type="radio" name="quiz37" class="quiz"> Invalid syntax</li>
+                <li><input value="correct" type="radio" name="quiz37" class="quiz"> Invalid syntax</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz37Correct">Correct!</p>
@@ -882,7 +889,7 @@ for (msg &amp;lt;- myChan) {stdout!(*msg)}</code></p>
             <p>Why did the pizzaShopAck code send <code>&quot;bob&quot;</code> as an ack channel instead of <code>@&quot;bob&quot;</code>?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz38" class="quiz"> No reason; it&#39;s just a style choice.</li>
-                <li><input value="correct"  type="radio" name="quiz38" class="quiz"> Because @&quot;bob&quot; is a name, but we have to send processes.</li>
+                <li><input value="correct" type="radio" name="quiz38" class="quiz"> Because @&quot;bob&quot; is a name, but we have to send processes.</li>
                 <li><input value="incorrect" type="radio" name="quiz38" class="quiz"> That&#39;s special syntax for ack channels.</li>
             </ul>
             <div class="quizResponse">
@@ -1033,7 +1040,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
                 <li><input value="incorrect" type="radio" name="quiz39" class="quiz"> Bill because his catch code is first.</li>
                 <li><input value="incorrect" type="radio" name="quiz39" class="quiz"> Bill because his catch code is closest to the throw code.</li>
                 <li><input value="incorrect" type="radio" name="quiz39" class="quiz"> Paige because her catch code is last.</li>
-                <li><input value="correct"  type="radio" name="quiz39" class="quiz"> We don&#39;t know; it is nondeterminate.</li>
+                <li><input value="correct" type="radio" name="quiz39" class="quiz"> We don&#39;t know; it is nondeterminate.</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz39Correct">Correct!</p>
@@ -1047,7 +1054,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <p>How is this game in rholang different than the real game where one ball is throw repeatedly?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz40" class="quiz"> It is a very accurate simulation</li>
-                <li><input value="correct"  type="radio" name="quiz40" class="quiz"> In rholang all balls are thrown at once and caught in any order</li>
+                <li><input value="correct" type="radio" name="quiz40" class="quiz"> In rholang all balls are thrown at once and caught in any order</li>
                 <li><input value="incorrect" type="radio" name="quiz40" class="quiz"> In rholang the balls are caught in the reverse order from what they are thrown.</li>
                 <li><input value="incorrect" type="radio" name="quiz40" class="quiz"> In rholang Bill makes all his catches, then Paige makes all her catches.</li>
             </ul>
@@ -1060,7 +1067,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <p>What code would Eve have to par in to throw an imposter ball worth 100 points?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz41" class="quiz"> for (imposter &lt;- throw){imposter!(100)}</li>
-                <li><input value="correct"  type="radio" name="quiz41" class="quiz"> throw!(100)</li>
+                <li><input value="correct" type="radio" name="quiz41" class="quiz"> throw!(100)</li>
                 <li><input value="incorrect" type="radio" name="quiz41" class="quiz"> @&quot;throw&quot;!(&quot;100&quot;)</li>
             </ul>
             <div class="quizResponse">
@@ -1156,7 +1163,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz42" class="quiz"> 0</li>
                 <li><input value="incorrect" type="radio" name="quiz42" class="quiz"> box</li>
-                <li><input value="correct"  type="radio" name="quiz42" class="quiz"> 42</li>
+                <li><input value="correct" type="radio" name="quiz42" class="quiz"> 42</li>
                 <li><input value="incorrect" type="radio" name="quiz42" class="quiz"> It is empty</li>
             </ul>
             <div class="quizResponse">
@@ -1168,7 +1175,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
                 <li><input value="incorrect" type="radio" name="quiz43" class="quiz"> 0</li>
                 <li><input value="incorrect" type="radio" name="quiz43" class="quiz"> @&quot;somePublicBox&quot;</li>
                 <li><input value="incorrect" type="radio" name="quiz43" class="quiz"> 42</li>
-                <li><input value="correct"  type="radio" name="quiz43" class="quiz"> It is empty</li>
+                <li><input value="correct" type="radio" name="quiz43" class="quiz"> It is empty</li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz43Correct">Correct!</p>
@@ -1195,7 +1202,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz44" class="quiz"> 0</li>
                 <li><input value="incorrect" type="radio" name="quiz44" class="quiz"> box</li>
-                <li><input value="correct"  type="radio" name="quiz44" class="quiz"> 42</li>
+                <li><input value="correct" type="radio" name="quiz44" class="quiz"> 42</li>
                 <li><input value="incorrect" type="radio" name="quiz44" class="quiz"> It is empty</li>
             </ul>
             <div class="quizResponse">
@@ -1206,7 +1213,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz45" class="quiz"> 0</li>
                 <li><input value="incorrect" type="radio" name="quiz45" class="quiz"> @&quot;somePublicBox&quot;</li>
-                <li><input value="correct"  type="radio" name="quiz45" class="quiz"> 42</li>
+                <li><input value="correct" type="radio" name="quiz45" class="quiz"> 42</li>
                 <li><input value="incorrect" type="radio" name="quiz45" class="quiz"> It is empty</li>
             </ul>
             <div class="quizResponse">
@@ -1243,7 +1250,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <p>How does the above code avoid the problem of each block getting called once?</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz46" class="quiz"> By forcing player one to use the top block</li>
-                <li><input value="correct"  type="radio" name="quiz46" class="quiz"> Because after the first call <code>activeCh</code> is empty</li>
+                <li><input value="correct" type="radio" name="quiz46" class="quiz"> Because after the first call <code>activeCh</code> is empty</li>
                 <li><input value="incorrect" type="radio" name="quiz46" class="quiz"> Because state channel make things sequential</li>
             </ul>
             <div class="quizResponse">
@@ -1346,7 +1353,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
                 <li><input value="incorrect" type="radio" name="quiz47" class="quiz"> <code>counterFactory!(*ack)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz47" class="quiz"> <code>counterFactory!(0, *ack)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz47" class="quiz"> <code>@&quot;counterFactory&quot;()</code></li>
-                <li><input value="correct"  type="radio" name="quiz47" class="quiz"> <code>counterFactory!(myIncrease, myReset)</code></li>
+                <li><input value="correct" type="radio" name="quiz47" class="quiz"> <code>counterFactory!(myIncrease, myReset)</code></li>
             </ul>
             <div class="quizResponse">
                 <p class="correct" id="quiz47Correct">Correct!</p>
@@ -1355,7 +1362,7 @@ new alice, bob, eve, stdout(`rho:io:stdout`) in {
             <p>How would a user reset their counter after creating as indicated above.</p>
             <ul class="quiz">
                 <li><input value="incorrect" type="radio" name="quiz48" class="quiz"> <code>myIncrease!(*ack)</code></li>
-                <li><input value="correct"  type="radio" name="quiz48" class="quiz"> <code>myReset!(*ack)</code></li>
+                <li><input value="correct" type="radio" name="quiz48" class="quiz"> <code>myReset!(*ack)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz48" class="quiz"> <code>counterFactory!(myReset, *ack)</code></li>
                 <li><input value="incorrect" type="radio" name="quiz48" class="quiz"> <code>counterFactory!(myReset)</code></li>
             </ul>
@@ -1379,7 +1386,7 @@ contract factory(cPanel) = {
 }</pre>
             <p>Which technique did the counter example use to dispatch methods?</p>
             <ul class="quiz">
-                <li><input value="correct"  type="radio" name="quiz49" class="quiz"> Separation of Powers</li>
+                <li><input value="correct" type="radio" name="quiz49" class="quiz"> Separation of Powers</li>
                 <li><input value="incorrect" type="radio" name="quiz49" class="quiz"> Control Panel</li>
             </ul>
             <div class="quizResponse">

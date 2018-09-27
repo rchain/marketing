@@ -1,0 +1,203 @@
+<div class="section" id="headerSection">
+    <div class="textWrapper">
+        <h1>Installing RNode</h1>
+        <p>* Similar to <a>https://www.ethereum.org/cli</a></p>
+    </div>
+</div>
+
+<div class="section" id="installSection">
+
+    <div id="tab">
+        <div class="item tab active" id="macos">
+            <a href="javascript:void(0)">macOS</a>
+        </div>
+        <div class="item tab" id="linux">
+            <a href="javascript:void(0)">Linux</a>
+        </div>
+        <div class="item tab" id="docker">
+            <a href="javascript:void(0)">Docker</a>
+        </div>
+        <div class="item tab" id="windows">
+            <a href="javascript:void(0)">Windows</a>
+        </div>
+    </div>
+
+    <div class="tabContent active" id="macosContent">
+        <div class="textWrapper">
+            <p>Csean use homebrew now (waiting for rchain to fork github.com/ddayan/homebrew-rnode until then need to u <b>brew install ddayan/rhcain/rnode</b>)</p>
+        </div>
+        <div class="textWrapper">
+            <p>Install</p>
+            <div class="code">
+                <p>$ brew tap ddayan/rchain</p>
+                <p>$ brew install rnode</p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p>Update</p>
+            <div class="code">
+                <p>$ brew upgrade update</p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p>Uninstall</p>
+            <div class="code">
+                <p>$ brew uninstall rnode</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabContent" id="linuxContent">
+        <div class="textWrapper">
+            <p><a href="https://github.com/rchain/rchain/releases">Download RNode</a></p>
+            <p><b>Ubuntu / Debian (rnode_0.x.x_all.deb)</b></p>
+        </div>
+        <div class="textWrapper">
+            <p>Install</p>
+            <div class="code">
+                <p>$ apt install ./rnode_0.x.x_all.deb</p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p>Update</p>
+            <div class="code">
+                <p>$ systemctl stop rnode && apt remove rnode && rm -rf ~/.rnode/rspace && apt install ./rnode_0.x.x_all.deb/p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p>Uninstall</p>
+            <div class="code">
+                <p>$ systemctl stop rnode && apt remove rnode && rm -rf ~/.rnode</p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p><b>Ubuntu / Debian (rnode_0.x.x_all.deb)</b></p>
+        </div>
+        <div class="textWrapper">
+            <p>Install</p>
+            <div class="code">
+                <p>$ dnf install ./rnode-0.x.x-1.noarch.rpm</p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p>Update</p>
+            <div class="code">
+                <p>$ systemctl stop rnode && dnf remove rnode && rm -rf ~/.rnode/rspace && dnf install ./rnode-0.x.x-1.noarch.rpm</p>
+            </div>
+        </div>
+        <div class="textWrapper">
+            <p>Uninstall</p>
+            <div class="code">
+                <p>$ systemctl stop rnode && dnf remove rnode && rm -rf ~/.rnode/rspace</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tabContent" id="dockerContent">
+        <div class="textWrapper">
+            <p><b>Docker</b></p>
+        </div>
+        <div class="textWrapper">
+            <p><b>Package (rnode-0.x.x.tgz)</b></p>
+        </div>
+        <div class="textWrapper">
+            <p><b>Package (rnode-0.x.x.tgz)</b></p>
+            <ul>
+                <li><b><a href="https://download.libsodium.org/doc/installation/" target="_blank">Libsodium</a></b></li>
+                <li><b>Java 8 <a href="http://openjdk.java.net/install/" target="_blank">OpenJDK</a>/<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Oracle</a></b></li>
+            </ul>
+        </div>
+        <div class="textWrapper">
+            <p>Install</p>
+            <div class="code">
+                <p>$ mkdir rnode && tar -xzvf rnode-0.x.x.tgz -C rnode/ --strip-components=1</p>
+                <p>$ echo "export RNODE_DIR=$PWD/rnode" >> ~/.bash_profile</p>
+                <p>$ echo "export PATH=\$RNODE_DIR/bin:\$PATH" >> ~/.bash_profile</p>
+                <p>$ source ~/.bash_profile</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tabContent" id="windowsContent">
+        <div class="textWrapper">
+            <p>*New batch file is not straightforward to use and unpredictable*</p>
+            <p>*can use vm instead*</p>
+            <ul>
+                <li>Install vm</li>
+                <li>Configure bridge adapter for UPNP</li>
+                <li>Follow linux guides</li>
+                <li>Link to a step by step guide?</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="section" id="rnodeSection">
+    <div class="textWrapper">
+        <h1>Using RNode</h1>
+        <p>This guide briefly goes over the most useful modes and options of the official RChain client RNode. To explore all the available configurations please run the help option.</p>
+        <div class="code">
+            <p>$ rnode run --help</p>
+        </div>
+    </div>
+    <div class="textWrapper">
+        <p><b>Running a node that connects to the testnet *need to get the testnet bootstrap at rcon3*</b></p>
+        <p>Default data directory used is $HOME/.rnode</p>
+        <div class="code">
+            <p>$ rnode run -b &lt;testnet bootstrap address&gt;</p>
+            <p>Example:</p>
+            <p>rnode run -b</p>
+        </div>
+    </div>
+    <div class="textWrapper">
+        <div class="code">
+            <p>rnode://acd0b05a971c243817a0cfd469f5d1a238c60294@52.119.8.109:40400</p>
+        </div>
+    </div>
+    <div class="textWrapper">
+        <p>The first you run this command the node client will create a node key-pair that will be used for node communications.</p>
+        <p>*Configuration file rnode.toml*</p>
+    </div>
+    <div class="textWrapper">
+        <p><b>Running a private testnet</b></p>
+        <p>If you wish to create a private network for a cheaper and faster testing environment you are able to create a network with predefined validators and a genesis block that specifies the wallets of the initial participants.</p>
+        <p>Running in standalone mode (-s option) will create a bonds file with five validators and no wallets. You can create a wallets file to distribute the initial coins, and a bonds file if you wish to have more control on the network validators.</p>
+    </div>
+    <div class="textWrapper">
+        <p>wallets.txt</p>
+        <div class="code">
+            <p>secp256k1 &lt;wallet public key&gt; &lt;amount&gt;</p>
+            <p>secp256k1 &lt;wallet public key&gt; &lt;amount&gt;</p>
+            <p>secp256k1 &lt;wallet public key&gt; &lt;amount&gt;</p>
+            <p>......</p>
+            <p>Wallets.txt example:</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
