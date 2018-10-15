@@ -23,6 +23,8 @@ digraph G {
 
     sharding [label="Sharding"];
 
+    abstractions [label="RChain Abstractions"];
+
     MPC2 -> MPC1;
     LADL -> MPC2;
 
@@ -34,6 +36,7 @@ digraph G {
     rnode1 -> fundamentals;
     rnode2 -> rnode1;
     rnode2 -> rho1;
+    rnode2 -> casper1;
 
     dapps1 -> rnode1;
     dapps1 -> rho1;
@@ -46,6 +49,8 @@ digraph G {
 
     sharding -> casper1;
     sharding -> rnode1;
+
+    abstractions -> fundamentals;
 
 	//dapp_dev_cert [shape=Msquare];
 }

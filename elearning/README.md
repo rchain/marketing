@@ -17,6 +17,10 @@ We won't cover this material until later or never
 * Longest Chain
 * Proof of Work
 
+### RChain Abstractions
+* RSpace
+* Casper
+
 ### Rholang 1
 * Send and Receive
 * Quoting and unquoting with `@` and `*`
@@ -62,7 +66,7 @@ We won't cover this material until later or never
 * Depository / Mint
 * Ethereum's attempts
 * Multi-parent model
-* Lattice model
+* Old Lattice model / namespaces
 
 ### Dapps 1
 * Nth caller example
@@ -71,8 +75,8 @@ We won't cover this material until later or never
 * **Project:** Build a mineable coin like 0xbitcoin
 
 ### Dapps 2
-*
-*
+* Cost model
+* Phlogiston dimensions
 * **Project:** Make your own REV:alt order book.
 
 
