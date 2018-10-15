@@ -32,6 +32,9 @@ Casper proof of stake is an important part of RChain's architecture, but not man
 ## librho
 A standard library of useful rholang contracts. This project will probably be in continual development and never really done.
 
+## Wallets
+Although they've been called "naval gazing" wallets are critical to developer adoption of the network. We aim to build a browser-based wallet UI that works with REV and other REV-like tokens. Development is a collaboration between coop marketing and inblock.io
+
 ## Rholang Language Reference
 There is a good rholang tutorial, and will eventually be a formal syntax and semantics of rholang, but there is no complete language reference guide. This document would serve as a resource that a rholang programmer can reference with any question about how rholang works. It is being written by Joshy Orndorff and Derek Sorensen of pyrofex under the supervision of Kelly Foster. Delivery date is New Years.
 
