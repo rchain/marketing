@@ -6,25 +6,13 @@ Reference the “[How to Run a RChain Meetup](https://docs.google.com/document/d
 
 If you are interested in running a meetup, don’t have a proposal yet and would like help, join the “[Local Meetup Development Support](https://discord.gg/mn4JwMW)” discord server, and reach out to community manager @AyAyron.
 
-### Framework for Github Issue:
+## Framework for Github Issue:
 
+Title: Meetup - [Location Country/State/City]
 
-
-Title:
-
-Meetup - [Location Country/State/City]
-
-
-
-Label:
-
-“meetup”
-
-
+Label: “meetup”
 
 Description:
-
-
 
 1. Summary: Brief explanation including format (workshop, panel, presentations etc.)
 2. Plan: Fill in the below information
@@ -54,58 +42,33 @@ Description:
     6. Membership - suggest that you also use a unique link also for membership sign ups. Coordinate with “Local Meetup support”
     7. Content - simply share your Videos/Photos or other content as a single file within the “Local Meetup support” channel.
 
-
-
-
-### Approval Process:
-
-
+### Approval Process
 
 Preparation: Work with “Local Meetup support” channel to create proposal, @AyAyron will help you create it as an Issue within the reward.rchain.coop system.
 
-
-
 Submit Proposal: After the proposal has been submitted, the “Events” lead for marketing will review and commit to sponsorship under the “post-meetup requirements” guidelines.
 
-
-
 Post Approval: Continue to work with “Local Meetup support” to provide weekly updates on the execution of the plan.
-
-
 
 If the proposal is for more than the avg. budget, beyond monthly budget, it will require @AyAyron support to escalate proposal to the “Events‘ team.
 
 If the proposal is for a request for funds in advance of meetup, it will require @AyAyron’s support to escalate proposal directly to Events team. To set expectations, it is unlikely that advances will be given to unestablished teams.
 
-
-
-### Reimbursement:
-
-
+### Reimbursement
 
 Reimbursements will only unlock if there is documentation for the expenses within the scope of the approved plan. Keep receipts for your expenses.
-
-
 
 Reimbursements will happen on the same schedule as rewards system reimbursements.
 
 Finalized by the 8th of the next month within the pay period.
 
-
-
-### Budget:
-
-
+### Budget
 
 Avg per meetup Budget: Up to 2500.00 USD reimbursed in RHOC/REV.
 
 Pilot Budget: 4-6 Meetups for October/November
 
-
-
-### Resources:
-
-
+### Resources
 
 [Local Meetup Support - Discord Server](https://discord.gg/mn4JwMW)
 
