@@ -11,7 +11,7 @@ Learners can choose their own path to a desired micro-certification(s). Allow Sk
 ### Learning Path 1 - Technology Decision Maker
 
 **Audience**: Managers, Entepreneurs, Investors, and Tech Evangelists \
-**Outcomes**: 
+**Outcomes**:
  1. Understand how each generation of blockchains builds on the previous ones
  2. Describe the problems 3rd generation blockchains are solving
  3. List several 3rd generation blockchains, and what makes RChain unique
@@ -54,7 +54,6 @@ Learners can choose their own path to a desired micro-certification(s). Allow Sk
 
 ## Knowledge Graph
 
-![Whiteboard Photo](whiteboard.jpg)
 ![Graphviz Generated](knowledge-graph.png)
 To generate this graph run `dot -Tpng knowledge-graph.dot > knowledge-graph.png`
 
@@ -108,62 +107,65 @@ We won't cover this material until later or never
 * Bundles
 * Data structures
 * Recursion
-* **Project:** Implement makeMint-style token
+* **Project:** Implement [REV-like](https://github.com/rchain/rchain/blob/dev/casper/src/main/rholang/MakeMint.rho) token
 
 ### Rholang 3
 * Advanced pattern matching
 * **Project:** Implement merge sort or some other similarly interesting algorithm
 
 ### RNode Basics
-* Install and run RNode
-* Use thin clients
+* [Install and run RNode](https://rchain.atlassian.net/wiki/spaces/CORE/pages/428376065/User+guide+for+running+RNode)
+* Use thin clients like `rnode repl` and `rnode eval`
 * deploy and propose blocks
 
 ### Validating
-* Genesis Ceremony Theory
+* [Genesis Ceremony Theory](https://rchain.atlassian.net/wiki/spaces/CORE/pages/485556483/Initializing+the+Blockchain+--+Protocol+for+generating+the+Genesis+block)
 * Practice of bootstrapping own network
-* Key management best practices
+* [Key management best practices](https://www.youtube.com/watch?v=AQDCe585Lnc)
 * Ecomonics
 
 ### Casper 1
-* Proof of Stake and wagering to play
+* Friendly Binary Consensus
+* Stake and wagering to play
 * Validator weights
 * Justifications
-* Fork choice rule
 * Equivocations
+* Fork choice rule
+[Raw casper paper](https://github.com/ethereum/research/blob/master/papers/CasperTFG/CasperTFG.pdf)
+[video1](https://www.youtube.com/watch?v=4LhC-jDaI00)
+[video2](https://www.youtube.com/watch?v=7KywsP7QCos)
+Google "Vald Zamfir Casper" for lots more
 
 ### Casper 2
 * Abstract CBC Casper
 * **Project:** implement casper over some game (eg. chess)
 
 ### Sharding
-* n times shards, n times throughput
-* RChain's tree model
+* Basics: n times shards, n times throughput
+* [RChain's tree model](https://rchain.atlassian.net/wiki/spaces/CORE/pages/478445641/Shards+in+RChain)
 * Depository / Mint
 * Ethereum's attempts
-* Multi-parent model
-* Old Lattice model / namespaces
+* [Multi-parent model?]()
+* [Old Lattice model / namespaces](https://rchain.atlassian.net/wiki/spaces/CORE/pages/238157964/Namespace+Sharding+Proposal) ([link2](https://rchain.atlassian.net/wiki/spaces/CORE/pages/389218311/Tree+vs+Lattice+Models+for+Namespaces+Sharding))([link 3](https://rchain.atlassian.net/wiki/spaces/CORE/pages/311722016/Powerset+shards))
 
 ### Dapps 1
-* Nth caller example
-* Using RChain-API and RSign
-* Name registry
-* **Project:** Build a mineable coin like 0xbitcoin
+* Using [RChain-API](https://github.com/rchain/rchain-api) and [RSign](https://github.com/dckc/RSign)
+* [Nth caller example](https://rchain.atlassian.net/wiki/spaces/RHOL/pages/511541342/Name+registry+specification)([video walkthrough](https://youtu.be/LYkEB-TPGFo))
+* [Name registry](https://rchain.atlassian.net/wiki/spaces/RHOL/pages/511541342/Name+registry+specification)
+* **Project:** Build a mineable coin like [0xbitcoin](https://0xbitcoin.org/)
 
 ### Dapps 2
-* Cost model
+* [Cost model](https://rchain.atlassian.net/wiki/spaces/RHOL/pages/562036994/Cost+accounting+specification)
 * Phlogiston dimensions
 * **Project:** Make your own REV:alt order book.
 
 
-### #Mobile Process Calculi 1
-* Lambda Calculus
+### #Mobile Process Calculi
+* [Lambda Calculus](https://www.youtube.com/watch?v=eis11j_iGMs)
   * Booleans
   * Church Numerals
-* Pi Calculus
-
-### Mobile Process Calculi 2
-* Rho Calc Paper
+* [Pi Calculus](http://www.lfcs.inf.ed.ac.uk/reports/91/ECS-LFCS-91-180/)[Jake's RCL Content](https://github.com/RChain-Collaborative-Learning)
+* [Rho Calc Paper](https://www.sciencedirect.com/science/article/pii/S1571066105051893)
 *
 * **Project:** Design your own calculus
 * **Project:** Implement pi calculus in k-framework
